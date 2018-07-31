@@ -4,14 +4,17 @@ import java.awt.Graphics;
 
 import Tiles.Tile;
 import Utils.Utils;
+import backEnd_game.Game;
 
 public class World {
 
+	private Game game;
 	private int width, height;
 	private int spawnX, spawnY;
 	private int[][] worldTiles;
 
-	public World(String path) {
+	public World(Game game, String path) {
+		this.game = game;
 		loadWorld(path);
 	}
 	
@@ -22,7 +25,8 @@ public class World {
 	public void render(Graphics g) {
 		for(int y = 0;y < height;y++) {
 			for(int x = 0;x < width;x++) {
-				getTile(x, y).render(g, x * Tile.WIDTH, y * Tile.HEIGHT);
+				getTile(x, y).render(g,(int) (x * Tile.WIDTH - game.getCamera().getxOffset()),
+						(int) (y * Tile.HEIGHT - game.getCamera().getyOffset()));
 			}
 		}
 	}

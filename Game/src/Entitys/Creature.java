@@ -1,9 +1,11 @@
 package Entitys;
 
+import backEnd_game.Game;
+
 public abstract class Creature extends Entity {
 
 	public static final int DEFAULT_HEALTH = 10;
-	public static final float DEFAULT_SPEED = 3.0f;
+	public static final float DEFAULT_SPEED = 1.5f;
 	public static final int DEFAULT_WIDTH = 64;
 	
 	protected int vida = 10;
@@ -13,8 +15,8 @@ public abstract class Creature extends Entity {
 	
 	public float xMove, yMove;
 	
-	public Creature(float x, float y, int width, int height) {
-		super(x, y, width, height);
+	public Creature(Game game, float x, float y, int width, int height) {
+		super(game, x, y, width, height);
 		vida = DEFAULT_HEALTH;
 		vel_mov = DEFAULT_SPEED;
 		xMove = 0;

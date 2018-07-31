@@ -8,13 +8,14 @@ import States.GameState;
 import States.State;
 import States.mainMenuState;
 import grafichs.Assets;
+import grafichs.gameCamera;
 
 public class Game implements Runnable {
 	
 	private Display display;
-	public int width, height;
+	private int width, height;
 	public String title;
-	
+
 	private boolean running = false;
 	private Thread thread; //Roda um mini programa onde iremos inicializar o Game
 	
@@ -28,6 +29,9 @@ public class Game implements Runnable {
 	//Input
 	private KeyManager keyManager;
 	
+	//
+	private gameCamera camera;
+	
 	public Game(String title, int width, int height) {
 		this.width = width;
 		this.height = height;
@@ -40,6 +44,8 @@ public class Game implements Runnable {
 		display = new Display(title, width, height);
 		display.getFrame().addKeyListener(keyManager);
 		Assets.init();
+		
+		camera = new gameCamera(this,0, 0);
 		
 		mainMenuState = new mainMenuState(this);
 		gameState = new GameState(this);
@@ -109,10 +115,6 @@ public class Game implements Runnable {
 		stop();
 	}
 	
-	public KeyManager getKeyManager() {
-		return keyManager;
-	}
-	
 	//inicia a thread
 	public synchronized void start() {
 		if(running)
@@ -135,6 +137,22 @@ public class Game implements Runnable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public KeyManager getKeyManager() {
+		return keyManager;
+	}
+	
+	public gameCamera getCamera() {
+		return camera;
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
 	}
 	
 	
