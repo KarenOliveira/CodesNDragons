@@ -1,9 +1,10 @@
 package Classes;
 import Entitys.Players;
+import backEnd_game.Handler;
 
 public class Guerreiro extends Players{
-	public Guerreiro(float x, float y) {
-		super(x, y);
+	public Guerreiro(Handler handler, float x, float y) {
+		super(handler,x, y);
 		// TODO Auto-generated constructor stub
 	}
 	public void mostrarAtaques(String spec) {

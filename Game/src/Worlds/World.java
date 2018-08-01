@@ -4,17 +4,17 @@ import java.awt.Graphics;
 
 import Tiles.Tile;
 import Utils.Utils;
-import backEnd_game.Game;
+import backEnd_game.Handler;
 
 public class World {
 
-	private Game game;
+	private Handler handler;
 	private int width, height;
 	private int spawnX, spawnY;
 	private int[][] worldTiles;
 
-	public World(Game game, String path) {
-		this.game = game;
+	public World(Handler handler, String path) {
+		this.handler = handler;
 		loadWorld(path);
 	}
 	
@@ -24,17 +24,16 @@ public class World {
 	
 	public void render(Graphics g) {
 		
-		int xStart = (int) Math.max(0, game.getCamera().getxOffset() / Tile.WIDTH);
-		int xEnd = (int) Math.min(width, (game.getCamera().getxOffset() + game.getWidth()) / Tile.WIDTH + 1);
-		int yStart = (int) Math.max(0, game.getCamera().getyOffset() / Tile.HEIGHT);
-		int yEnd = (int) Math.min(width, (game.getCamera().getyOffset() + game.getHeight()) / Tile.HEIGHT + 1);
-		
+		int xStart = (int) Math.max(0, handler.getCamera().getxOffset() / Tile.WIDTH);
+		int xEnd = (int) Math.min(width, (handler.getCamera().getxOffset() + handler.getWidth()) / Tile.WIDTH + 1);
+		int yStart = (int) Math.max(0, handler.getCamera().getyOffset() / Tile.HEIGHT);
+		int yEnd = (int) Math.min(width, (handler.getCamera().getyOffset() + handler.getHeight()) / Tile.HEIGHT + 1);
 		
 		
 		for(int y = yStart;y < yEnd;y++) {
 			for(int x = xStart;x < xEnd;x++) {
-				getTile(x, y).render(g,(int) (x * Tile.WIDTH - game.getCamera().getxOffset()),
-						(int) (y * Tile.HEIGHT - game.getCamera().getyOffset()));
+				getTile(x, y).render(g,(int) (x * Tile.WIDTH - handler.getCamera().getxOffset()),
+						(int) (y * Tile.HEIGHT - handler.getCamera().getyOffset()));
 			}
 		}
 	}

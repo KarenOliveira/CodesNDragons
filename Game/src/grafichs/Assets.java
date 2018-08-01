@@ -13,7 +13,7 @@ public class Assets {
 	public static void init() {
 		spriteSheet minesheet = new spriteSheet(ImageLoader.loadImage("/Textures/mineSheet.jpg"));
 		spriteSheet back1 = new spriteSheet(ImageLoader.loadImage("/Textures/background1.jpg"));
-		spriteSheet megaSheet = new spriteSheet(ImageLoader.loadImage("/Textures/megaman_sheet.jpg"));
+		spriteSheet megaSheet = new spriteSheet(ImageLoader.loadImage("/Textures/megaman_sheet.png"));
 		
 		dirt = minesheet.crop(300, 300, width, height);
 		stone = minesheet.crop(0, 525, width, height);

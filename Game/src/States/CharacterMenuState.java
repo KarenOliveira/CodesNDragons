@@ -2,12 +2,12 @@ package States;
 
 import java.awt.Graphics;
 
-import backEnd_game.Game;
+import backEnd_game.Handler;
 
 public class CharacterMenuState extends State {
 
-	public CharacterMenuState(Game game) {
-		super(game);
+	public CharacterMenuState(Handler handler) {
+		super(handler);
 		// TODO Auto-generated constructor stub
 	}
 

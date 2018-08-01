@@ -1,9 +1,10 @@
 package Classes;
 import Entitys.Players;
+import backEnd_game.Handler;
 public class Druida extends Players{
 	
-	public Druida(float x, float y) {
-		super(x, y);
+	public Druida(Handler handler, float x, float y) {
+		super(handler, x, y);
 		// TODO Auto-generated constructor stub
 	}
 
