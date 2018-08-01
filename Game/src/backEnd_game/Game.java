@@ -62,7 +62,7 @@ public class Game implements Runnable {
 		if(State.getState() != null)
 			State.getState().tick();
 	}
-	
+		
 	private void render() {
 		bs = display.getCanvas().getBufferStrategy();
 		if(bs == null) {
@@ -70,7 +70,7 @@ public class Game implements Runnable {
 			return;
 		}
 		g = bs.getDrawGraphics();
-		//Clear Screen
+		//Clear Screen	
 		g.clearRect(0, 0, width, height);
 		////////Começa a desenhar aqui///////////
 		

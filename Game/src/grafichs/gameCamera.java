@@ -27,13 +27,13 @@ public class gameCamera {
 
 	public void centerEntity(Entity e) {
 		xOffset = e.getX() - game.getWidth() / 2 + e.getWidth() / 2;
-		yOffset = e.getY() - game.getHeight() / 2 + e.getWidth() / 2;
+		yOffset = e.getY() - game.getHeight() / 2 + e.getWidth() / 2;	
 	}
 
 	public void setxOffset(float xOffset) {
 		this.xOffset = xOffset;
 	}
-
+	
 	public float getyOffset() {
 		return yOffset;
 	}
@@ -41,5 +41,4 @@ public class gameCamera {
 	public void setyOffset(float yOffset) {
 		this.yOffset = yOffset;
 	}
-
 }

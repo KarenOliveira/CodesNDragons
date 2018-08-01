@@ -32,8 +32,8 @@ public class World {
 		
 		for(int y = yStart;y < yEnd;y++) {
 			for(int x = xStart;x < xEnd;x++) {
-				getTile(x, y).render(g,(int) (x * Tile.WIDTH - handler.getCamera().getxOffset()),
-						(int) (y * Tile.HEIGHT - handler.getCamera().getyOffset()));
+				getTile(x, y).render(g,(int) (x * 64 - handler.getCamera().getxOffset()),
+						(int) (y * 64 - handler.getCamera().getyOffset()));
 			}
 		}
 	}

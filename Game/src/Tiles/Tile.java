@@ -12,6 +12,13 @@ public class Tile {
 	public static Tile dirtTile = new dirtTile(0);
 	public static Tile stoneTile = new stoneTile(1);
 	public static Tile lavaTile = new lavaTile(2);
+	public static Tile stonefloorTileSL = new stonefloorTileSL(3);
+	public static Tile stonefloorTileSM = new stonefloorTileSM(4);
+	public static Tile stonefloorTileSR = new stonefloorTileSR(5);
+	public static Tile stonefloorTileML = new stonefloorTileML(6);
+	public static Tile stonefloorTileMM = new stonefloorTileMM(7);
+	public static Tile stonefloorTileMR = new stonefloorTileMR(8);
+	public static Tile stonefloorTileIL = new stonefloorTileIL(9);
 	
 	//CLASS
 	

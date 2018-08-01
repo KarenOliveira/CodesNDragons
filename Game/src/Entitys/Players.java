@@ -37,9 +37,10 @@ public class Players extends Creature{
 	}
 
 	public void render(Graphics g) {
+		
 		g.drawImage(Assets.player, (int) (x - handler.getCamera().getxOffset()), 
 				(int) (y - handler.getCamera().getyOffset()),
-				width, height, null);
+				64, 64,null);
 		
 	}
 	
