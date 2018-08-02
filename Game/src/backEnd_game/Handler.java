@@ -2,7 +2,6 @@ package backEnd_game;
 
 import Graphics.gameCamera;
 import Inputs.KeyManager;
-import Worlds.Room;
 import Worlds.World;
 
 public class Handler {

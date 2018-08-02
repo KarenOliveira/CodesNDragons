@@ -24,15 +24,10 @@ public class gameCamera {
 	public float getxOffset() {
 		return xOffset;
 	}
-	public void cameraCenter(Entity e) {
-		centerEntity(e);
-	}
+
 	public void centerEntity(Entity e) {
 		xOffset = e.getX() - handler.getWidth() / 2 + e.getWidth() / 2;
 		yOffset = e.getY() - handler.getHeight() / 2 + e.getWidth() / 2;	
-	}
-	public void centerOnRoom() {
-		
 	}
 	public void setxOffset(float xOffset) {
 		this.xOffset = xOffset;
