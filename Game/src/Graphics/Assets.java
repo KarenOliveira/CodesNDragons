@@ -6,16 +6,23 @@ public class Assets {
 	
 	private static final int width = 16, height = 16;
 
-	public static BufferedImage player, dirt, grass, stone, sand, lava;
+	//floors
 	public static BufferedImage stonefloorSL,stonefloorSM, stonefloorSR;
 	public static BufferedImage stonefloorML,stonefloorMM, stonefloorMR;
 	public static BufferedImage stonefloorIL, stonefloorIM, stonefloorIR;
+	//walls
 	public static BufferedImage stonewallSL, stonewallSM, stonewallSR;
 	public static BufferedImage stonewallML, stonewallMM, stonewallMR; 
 	public static BufferedImage stonewallIL, stonewallIM, stonewallIR;
+	//wallsX
 	public static BufferedImage stonewallSX, stonewallRX,stonewallIX, stonewallLX,stonewallX;
+	//corridors
+	public static BufferedImage corridorVS,corridorVM,corridorVI;
+	public static BufferedImage corridorHS,corridorHM,corridorHI;
+	//chars
 	public static BufferedImage druidfrente;
 	public static BufferedImage mainMenuBack;
+	public static BufferedImage black;
 	
 	
 	public static void init() {
@@ -23,6 +30,7 @@ public class Assets {
 		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
 		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
 		
+		black = ImageLoader.loadImage("/Textures/black.jpg");
 		//floor
 		stonefloorSL = floors.crop(0, 96, width, height);
 		stonefloorSM = floors.crop(16, 96, width, height);
@@ -49,7 +57,18 @@ public class Assets {
 		stonewallIX = walls.crop(64,224, width, height);
 		stonewallLX = walls.crop(48, 208, width, height);
 		stonewallX = walls.crop(64, 208, width, height);
-
+		
+		//corridors
+		//vertical
+		corridorVS = floors.crop(48,96, width, height);
+		corridorVM = floors.crop(48, 112, width, height);
+		corridorVI = floors.crop(48, 128, width, height);
+		//horizontal
+		corridorHS = floors.crop(48, 112, width, height);
+		corridorHM = floors.crop(64, 112 ,width, height);
+		corridorHI = floors.crop(80, 112, width, height);
+		
+		//chars
 		//druid
 		druidfrente = druid.crop(0, 0, width, height);
 		

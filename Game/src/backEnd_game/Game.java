@@ -35,16 +35,16 @@ public class Game implements Runnable {
 	//Handler
 	private Handler handler;
 	
-	public Game(String title, int width, int height) {
+	public Game(String title,int width, int height) {
+		this.title = title;
 		this.width = width;
 		this.height = height;
-		this.title = title;
 		keyManager = new KeyManager();
 	}
 	
 	//inicializa os Buffers, roda no começo do run()
 	private void init() {
-		display = new Display(title, width, height);
+		display = new Display(title, width,height);
 		display.getFrame().addKeyListener(keyManager);
 		Assets.init();
 		

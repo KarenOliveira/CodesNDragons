@@ -41,7 +41,7 @@ public class World {
 	public Tile getTile(int x, int y) {
 		Tile t = Tile.tileStore[worldTiles[x][y]];
 		if(t == null)
-			return Tile.stonefloorTileMM;
+			return Tile.blackTile;
 		return t;
 	}
 	

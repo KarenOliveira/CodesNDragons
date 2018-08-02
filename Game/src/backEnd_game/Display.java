@@ -9,10 +9,9 @@ public class Display {
 
 	private JFrame frame;
 	private Canvas canvas;
-	
+	private int width, height;
 	
 	private String title;
-	private int width, height;
 	
 	public Display(String title, int width, int height) {
 		this.title = title;

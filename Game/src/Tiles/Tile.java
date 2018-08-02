@@ -6,14 +6,14 @@ import java.awt.image.BufferedImage;
 import Tiles.Floors.*;
 import Tiles.Walls.*;
 import Tiles.Walls.WallsX.*;
+import Tiles.Corridors.Vertical.*;
+import Tiles.Corridors.Horizontal.*;
 
-public class Tile {
-	
-	//static Tiles
-	
+public class Tile {	
 	
 	public static Tile[] tileStore = new Tile[256];
 
+	public static Tile blackTile = new blackTile(000);
 	//floor
 	public static Tile stonefloorTileSL = new stonefloorTileSL(111);
 	public static Tile stonefloorTileSM = new stonefloorTileSM(112);
@@ -25,6 +25,15 @@ public class Tile {
 	public static Tile stonefloorTileIM = new stonefloorTileIM(132);
 	public static Tile stonefloorTileIR = new stonefloorTileIR(133);
 	
+	//corridors
+	//vertical
+	public static Tile corridorTileVS = new corridorTileVS(11);
+	public static Tile corridorTileVM = new corridorTileVM(12);
+	public static Tile corridorTileVI = new corridorTileVI(13);
+	//horizontal
+	public static Tile corridorTileHS = new corridorTileHS(14);
+	public static Tile corridorTileHM = new corridorTileHM(15);
+	public static Tile corridorTileHI = new corridorTileHI(16);
 	//walls
 	public static Tile stonewallTileSL = new stonewallTileSL(211);
 	public static Tile stonewallTileSM = new stonewallTileSM(212);
@@ -37,11 +46,13 @@ public class Tile {
 	public static Tile stonewallTileIR = new stonewallTileIR(233);
 	
 	//wallsX
-	public static Tile stonewallTileSX = new stonewallTileSX(31);
-	public static Tile stonewallTileRX = new stonewallTileRX(32);
-	public static Tile stonewallTileIX = new stonewallTileIX(33);
-	public static Tile stonewallTileLX = new stonewallTileLX(34);
-	public static Tile stonewallTileX = new stonewallTileX(35);
+	public static Tile stonewallTileSX = new stonewallTileSX(21);
+	public static Tile stonewallTileRX = new stonewallTileRX(22);
+	public static Tile stonewallTileIX = new stonewallTileIX(23);
+	public static Tile stonewallTileLX = new stonewallTileLX(24);
+	public static Tile stonewallTileX = new stonewallTileX(25);
+	
+
 
 	//CLASS
 	
