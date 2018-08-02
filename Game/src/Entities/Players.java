@@ -1,5 +1,6 @@
 package Entities;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import Graphics.Assets;
@@ -41,7 +42,8 @@ public class Players extends Creature{
 		g.drawImage(Assets.druidfrente, (int) (x - handler.getCamera().getxOffset()), 
 				(int) (y - handler.getCamera().getyOffset()),
 				64, 64,null);
-		
+		g.setColor(Color.red);
+		g.fillRect((int) (x + bounds.x - handler.getCamera().getxOffset()),(int) (y + bounds.y - handler.getCamera().getyOffset()), bounds.width,bounds.height);
 	}
 	
 

@@ -1,12 +1,13 @@
 package Entities;
 
+import Tiles.Tile;
 import backEnd_game.Handler;
 
 public abstract class Creature extends Entity {
 
 	public static final int DEFAULT_HEALTH = 10;
 	public static final float DEFAULT_SPEED = 3.0f;
-	public static final int DEFAULT_WIDTH = 16	;
+	public static final int DEFAULT_WIDTH = 64	;
 	
 	protected int vida = 10;
 	protected  int forca, inteligencia, defesa, iniciativa;
@@ -24,10 +25,44 @@ public abstract class Creature extends Entity {
 	}
 	
 	public void move() {
-		x += xMove;
-		y += yMove;
+		moveX();
+		moveY();
 	}
-	
+	public void moveX() {
+		if(xMove>0) {//move right
+			int tx = (int) (x + xMove + bounds.x + bounds.width)/Tile.WIDTH;
+			if(!collisionWithTile(tx,(int) (y + bounds.y)/Tile.HEIGHT)&&
+					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height)/Tile.HEIGHT)) {
+				x+=xMove;
+			}
+			
+		}else if(xMove<0) {//move left
+			int tx = (int) (x + xMove + bounds.x)/Tile.WIDTH;
+			if(!collisionWithTile(tx,(int) (y + bounds.y)/Tile.HEIGHT)&&
+					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height)/Tile.HEIGHT)) {
+				x+=xMove;
+			}
+		}
+	}
+	public void moveY() {
+		if(yMove < 0) {//up
+			int ty = (int) (y + yMove + bounds.y)/Tile.HEIGHT;
+			
+			if(!collisionWithTile((int)(x + bounds.x)/Tile.WIDTH, ty)&&
+					!collisionWithTile((int)(x + bounds.x + bounds.width)/Tile.WIDTH, ty)) {
+				y += yMove;
+			}
+		}else if(yMove > 0) {//down
+			int ty = (int) (y + yMove + bounds.y + bounds.height)/Tile.HEIGHT;
+			if(!collisionWithTile((int)(x + bounds.x)/Tile.WIDTH, ty)&&
+					!collisionWithTile((int)(x + bounds.x + bounds.width)/Tile.WIDTH, ty)) {
+				y += yMove;
+			}
+		}
+	}
+	protected boolean collisionWithTile(int x, int y) {
+		return handler.getWorld().getTile(x, y).isSolid();
+	}
 	
 	//GETTERS AND SETTERS
 

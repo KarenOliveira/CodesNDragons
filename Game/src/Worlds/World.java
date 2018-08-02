@@ -39,6 +39,8 @@ public class World {
 	}
 	
 	public Tile getTile(int x, int y) {
+		if(x<0||y<0||x>=width||y>=height)
+			return Tile.blackTile;
 		Tile t = Tile.tileStore[worldTiles[x][y]];
 		if(t == null)
 			return Tile.blackTile;
