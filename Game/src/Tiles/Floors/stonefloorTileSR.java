@@ -1,5 +1,6 @@
-package Tiles;
+package Tiles.Floors;
 
+import Tiles.Tile;
 import grafichs.Assets;
 
 public class stonefloorTileSR extends Tile{

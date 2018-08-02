@@ -41,7 +41,7 @@ public class World {
 	public Tile getTile(int x, int y) {
 		Tile t = Tile.tileStore[worldTiles[x][y]];
 		if(t == null)
-			return Tile.dirtTile;
+			return Tile.stonefloorTileMM;
 		return t;
 	}
 	
@@ -62,4 +62,13 @@ public class World {
 		}
 		
 	}
+
+	public int getSpawnX() {
+		return spawnX;
+	}
+
+	public int getSpawnY() {
+		return spawnY;
+	}
+	
 }

@@ -15,7 +15,7 @@ public class GameState extends State {
 		super(handler);
 		world = new World(handler, "res/Worlds/WorldKaren.txt");
 		handler.setWorld(world);
-		player = new Players(handler, 480, 600);
+		player = new Players(handler, world.getSpawnX(), world.getSpawnY());
 	}
 	
 	public void tick() {
