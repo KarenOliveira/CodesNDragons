@@ -2,7 +2,6 @@ package States;
 
 import java.awt.Graphics;
 
-import backEnd_game.Game;
 import backEnd_game.Handler;
 
 public abstract class State {

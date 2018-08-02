@@ -1,7 +1,7 @@
 package Classes;
 import java.util.Scanner;
 
-import Entitys.Players;
+import Entities.Players;
 import backEnd_game.Handler;
 
 public class Mago extends Players{

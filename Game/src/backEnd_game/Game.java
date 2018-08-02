@@ -3,12 +3,12 @@ package backEnd_game;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
+import Graphics.Assets;
+import Graphics.gameCamera;
 import Inputs.KeyManager;
 import States.GameState;
 import States.State;
 import States.mainMenuState;
-import grafichs.Assets;
-import grafichs.gameCamera;
 
 public class Game implements Runnable {
 	

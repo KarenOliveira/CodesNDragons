@@ -2,7 +2,7 @@ package States;
 
 import java.awt.Graphics;
 
-import Entitys.Players;
+import Entities.Players;
 import Worlds.World;
 import backEnd_game.Handler;
 

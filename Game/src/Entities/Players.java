@@ -1,9 +1,9 @@
-package Entitys;
+package Entities;
 
 import java.awt.Graphics;
 
+import Graphics.Assets;
 import backEnd_game.Handler;
-import grafichs.Assets;
 
 public class Players extends Creature{
 	
@@ -38,7 +38,7 @@ public class Players extends Creature{
 
 	public void render(Graphics g) {
 		
-		g.drawImage(Assets.player, (int) (x - handler.getCamera().getxOffset()), 
+		g.drawImage(Assets.druidfrente, (int) (x - handler.getCamera().getxOffset()), 
 				(int) (y - handler.getCamera().getyOffset()),
 				64, 64,null);
 		

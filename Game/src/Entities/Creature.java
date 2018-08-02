@@ -1,4 +1,4 @@
-package Entitys;
+package Entities;
 
 import backEnd_game.Handler;
 

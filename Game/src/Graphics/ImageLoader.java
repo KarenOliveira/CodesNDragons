@@ -1,8 +1,7 @@
-package grafichs;
+package Graphics;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.nio.Buffer;
 
 import javax.imageio.ImageIO;
 

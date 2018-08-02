@@ -1,7 +1,7 @@
 package Tiles.Walls;
 
+import Graphics.Assets;
 import Tiles.Tile;
-import grafichs.Assets;
 
 public class stonewallTileSM extends Tile{
 	

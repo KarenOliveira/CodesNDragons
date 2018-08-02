@@ -1,7 +1,6 @@
-package grafichs;
+package Graphics;
 
 import java.awt.image.BufferedImage;
-import java.nio.Buffer;
 
 public class Assets {
 	
@@ -15,14 +14,14 @@ public class Assets {
 	public static BufferedImage stonewallML, stonewallMM, stonewallMR; 
 	public static BufferedImage stonewallIL, stonewallIM, stonewallIR;
 	public static BufferedImage stonewallSX, stonewallRX,stonewallIX, stonewallLX,stonewallX;
+	public static BufferedImage druidfrente;
 	public static BufferedImage mainMenuBack;
 	
 	
 	public static void init() {
-		spriteSheet back1 = new spriteSheet(ImageLoader.loadImage("/Textures/background1.jpg"));
-		spriteSheet megaSheet = new spriteSheet(ImageLoader.loadImage("/Textures/megaman_sheet.png"));
-		spriteSheet floors = new spriteSheet(ImageLoader.loadImage("/Textures/Floor.png"));
-		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Wall.png"));
+		spriteSheet floors = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Floor.png"));
+		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
+		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
 		
 		//floor
 		stonefloorSL = floors.crop(0, 96, width, height);
@@ -50,9 +49,9 @@ public class Assets {
 		stonewallIX = walls.crop(64,224, width, height);
 		stonewallLX = walls.crop(48, 208, width, height);
 		stonewallX = walls.crop(64, 208, width, height);
-		
-		mainMenuBack = back1.crop(0, 0, 1024, 768);
-		player = megaSheet.crop(0, 0, 65, 65);
+
+		//druid
+		druidfrente = druid.crop(0, 0, width, height);
 		
 	}
 	

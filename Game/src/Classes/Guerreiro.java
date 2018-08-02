@@ -1,5 +1,5 @@
 package Classes;
-import Entitys.Players;
+import Entities.Players;
 import backEnd_game.Handler;
 
 public class Guerreiro extends Players{
