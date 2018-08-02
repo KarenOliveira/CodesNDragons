@@ -13,15 +13,27 @@ public class Room {
 		this.boundaries = boundaries;
 		this.handler = handler;
 	}
-	public boolean verifyRoomChange(Entity e) {
-		if(this.boundaries.x > e.getX()/Tile.WIDTH||this.boundaries.x + this.boundaries.width < e.getX()/Tile.WIDTH) {
-			return true;
-		}else if(this.boundaries.y > e.getY()/Tile.HEIGHT||this.boundaries.y + this.boundaries.height < e.getY()/Tile.HEIGHT){
-			return true;
+	public void verifyRoomChange(Entity e) {
+		if(this.boundaries.x > e.getX()/Tile.WIDTH) {
+			changingRoomLeft(e);
+		}else if(this.boundaries.x + this.boundaries.width < e.getX()/Tile.WIDTH) {
+			changingRoomRight(e);
+		}else if(this.boundaries.y > e.getY()/Tile.HEIGHT){
+			changingRoomUp(e);
+		}else if(this.boundaries.y + this.boundaries.height < e.getY()/Tile.HEIGHT) {
+			changingRoomDown(e);
 		}
-	return false;
 	}
-	public void changingRoom(Entity e) {
+	public void changingRoomLeft(Entity e) {
+		
+	}
+	public void changingRoomRight(Entity e) {
+		
+	}
+	public void changingRoomUp(Entity e) {
+		
+	}
+	public void changingRoomDown(Entity e) {
 		
 	}
 }
