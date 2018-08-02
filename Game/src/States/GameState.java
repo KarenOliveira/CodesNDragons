@@ -13,7 +13,6 @@ public class GameState extends State {
 	private Players player;
 	private World world;
 	private Room room;
-	private boolean trocaSala;
 	
 	public GameState(Handler handler) {
 		super(handler);
@@ -27,7 +26,6 @@ public class GameState extends State {
 	public void tick() {
 		world.tick();
 		player.tick();
-		trocaSala = room.verifyRoomChange(player);
 	}
 	
 	public void render(Graphics g) {
