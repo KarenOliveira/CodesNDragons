@@ -34,6 +34,6 @@ public class Room {
 		
 	}
 	public void changingRoomDown(Entity e) {
-		
+		//verificar boundaries.x
 	}
 }
