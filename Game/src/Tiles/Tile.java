@@ -24,7 +24,7 @@ public class Tile {
 	public static Tile stonefloorTileIL = new stonefloorTileIL(131);
 	public static Tile stonefloorTileIM = new stonefloorTileIM(132);
 	public static Tile stonefloorTileIR = new stonefloorTileIR(133);
-	
+	public static Tile stonefloorTileX = new stonefloorTileX(100);
 	//corridors
 	//vertical
 	public static Tile corridorTileVS = new corridorTileVS(11);

@@ -10,6 +10,7 @@ public class Assets {
 	public static BufferedImage stonefloorSL,stonefloorSM, stonefloorSR;
 	public static BufferedImage stonefloorML,stonefloorMM, stonefloorMR;
 	public static BufferedImage stonefloorIL, stonefloorIM, stonefloorIR;
+	public static BufferedImage stonefloorX;
 	//walls
 	public static BufferedImage stonewallSL, stonewallSM, stonewallSR;
 	public static BufferedImage stonewallML, stonewallMM, stonewallMR; 
@@ -41,6 +42,7 @@ public class Assets {
 		stonefloorIL = floors.crop(0, 128, width, height);
 		stonefloorIM = floors.crop(16, 128, width, height);
 		stonefloorIR = floors.crop(32, 128, width, height);
+		stonefloorX = floors.crop(80, 96, width, height);
 		
 		//wall
 		stonewallSL = walls.crop(0, 192, width, height);

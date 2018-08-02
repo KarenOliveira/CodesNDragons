@@ -34,6 +34,8 @@ public abstract class Creature extends Entity {
 			if(!collisionWithTile(tx,(int) (y + bounds.y)/Tile.HEIGHT)&&
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height)/Tile.HEIGHT)) {
 				x+=xMove;
+			}else {
+				x = tx*Tile.WIDTH - bounds.x - bounds.width - 1;
 			}
 			
 		}else if(xMove<0) {//move left
@@ -41,6 +43,8 @@ public abstract class Creature extends Entity {
 			if(!collisionWithTile(tx,(int) (y + bounds.y)/Tile.HEIGHT)&&
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height)/Tile.HEIGHT)) {
 				x+=xMove;
+			}else {
+				x = tx * Tile.WIDTH + Tile.WIDTH - bounds.x;
 			}
 		}
 	}
@@ -51,12 +55,16 @@ public abstract class Creature extends Entity {
 			if(!collisionWithTile((int)(x + bounds.x)/Tile.WIDTH, ty)&&
 					!collisionWithTile((int)(x + bounds.x + bounds.width)/Tile.WIDTH, ty)) {
 				y += yMove;
+			}else {
+				y = ty * Tile.HEIGHT + Tile.HEIGHT - bounds.y;
 			}
 		}else if(yMove > 0) {//down
 			int ty = (int) (y + yMove + bounds.y + bounds.height)/Tile.HEIGHT;
 			if(!collisionWithTile((int)(x + bounds.x)/Tile.WIDTH, ty)&&
 					!collisionWithTile((int)(x + bounds.x + bounds.width)/Tile.WIDTH, ty)) {
 				y += yMove;
+			}else {
+				y = ty * Tile.HEIGHT - bounds.y - bounds.height - 1;
 			}
 		}
 	}
