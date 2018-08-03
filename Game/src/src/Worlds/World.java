@@ -2,6 +2,9 @@ package Worlds;
 
 import java.awt.Graphics;
 
+import Entities.EntityManager;
+import Entities.Players;
+import Entities.Static.Spike;
 import Tiles.Tile;
 import Utils.Utils;
 import backEnd_game.Handler;
@@ -12,14 +15,26 @@ public class World {
 	private int width, height;
 	private int spawnX, spawnY;
 	private int[][] worldTiles;
-
+	
+	//Entities
+	private EntityManager entityManager;
+	
+	
 	public World(Handler handler, String path) {
 		this.handler = handler;
-		loadWorld(path);
-	}
-	
-	public void tick() {
+		entityManager = new EntityManager(handler, new Players(handler, 100,100));
+		entityManager.addEntity(new Spike(handler, 60, 60));
 		
+		
+		loadWorld(path);
+		
+		entityManager.getPlayer().setX(spawnX);
+		entityManager.getPlayer().setX(spawnY);
+		
+	}
+
+	public void tick() {
+		entityManager.tick();
 	}
 	
 	public void render(Graphics g) {
@@ -36,11 +51,14 @@ public class World {
 						(int) (y * 64 - handler.getCamera().getyOffset()));
 			}
 		}
+		
+		entityManager.render(g);
 	}
 	
 	public Tile getTile(int x, int y) {
 		if(x<0||y<0||x>=width||y>=height)
 			return Tile.blackTile;
+		
 		Tile t = Tile.tileStore[worldTiles[x][y]];
 		if(t == null)
 			return Tile.blackTile;
@@ -64,6 +82,13 @@ public class World {
 		}
 		
 	}
+	
+	//GETTERS AND SETTERS
+	
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+	
 
 	public int getSpawnX() {
 		return spawnX;

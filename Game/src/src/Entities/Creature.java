@@ -25,9 +25,12 @@ public abstract class Creature extends Entity {
 	}
 	
 	public void move() {
-		moveX();
-		moveY();
+		if(!checkCollision(xMove, 0f))
+			moveX();
+		if(!checkCollision(0f,yMove))
+			moveY();
 	}
+	
 	public void moveX() {
 		if(xMove>0) {//move right
 			int tx = (int) (x + xMove + bounds.x + bounds.width)/Tile.WIDTH;
@@ -48,6 +51,7 @@ public abstract class Creature extends Entity {
 			}
 		}
 	}
+	
 	public void moveY() {
 		if(yMove < 0) {//up
 			int ty = (int) (y + yMove + bounds.y)/Tile.HEIGHT;
@@ -68,6 +72,7 @@ public abstract class Creature extends Entity {
 			}
 		}
 	}
+	
 	protected boolean collisionWithTile(int x, int y) {
 		return handler.getWorld().getTile(x, y).isSolid();
 	}

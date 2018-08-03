@@ -21,7 +21,11 @@ public class Assets {
 	public static BufferedImage corridorVS,corridorVM,corridorVI;
 	public static BufferedImage corridorHS,corridorHM,corridorHI;
 	//chars
-	public static BufferedImage druidfrente;
+	public static BufferedImage[] druid_down, druid_left, druid_right, druid_up;
+	//StaticEntities
+	public static BufferedImage spike;
+	
+	
 	public static BufferedImage mainMenuBack;
 	public static BufferedImage black;
 	
@@ -30,6 +34,7 @@ public class Assets {
 		spriteSheet floors = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Floor.png"));
 		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
 		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
+		spriteSheet traps = new spriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
 		
 		black = ImageLoader.loadImage("/Textures/black.jpg");
 		//floor
@@ -70,9 +75,25 @@ public class Assets {
 		corridorHM = floors.crop(64, 112 ,width, height);
 		corridorHI = floors.crop(80, 112, width, height);
 		
+		//Static
+		spike = traps.crop(48, 48, width, height);
+		
 		//chars
 		//druid
-		druidfrente = druid.crop(0, 0, width, height);
+		
+		druid_down = new BufferedImage[4];
+		druid_left = new BufferedImage[4];
+		druid_right = new BufferedImage[4];
+		druid_up = new BufferedImage[4];
+		
+		for(int i = 0;i<=3;i++)
+			druid_down[i] = druid.crop(i*16, 0, width, height);
+		for(int i = 0;i<=3;i++)
+			druid_left[i] = druid.crop(i*16, 16, width, height);
+		for(int i = 0;i<=3;i++)
+			druid_right[i] = druid.crop(i*16, 32, width, height);
+		for(int i = 0;i<=3;i++)
+			druid_up[i] = druid.crop(i*16, 48, width, height);
 		
 	}
 	
