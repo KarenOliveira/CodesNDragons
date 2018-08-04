@@ -9,7 +9,7 @@ public class KeyManager implements KeyListener{
 	public boolean up, down, left, right;
 	
 	public KeyManager() {
-		keys = new boolean[256];
+		keys = new boolean[1024];
 	}
 	
 	public void tick() {

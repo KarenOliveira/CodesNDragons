@@ -6,6 +6,8 @@ import java.awt.image.BufferStrategy;
 import Graphics.Assets;
 import Graphics.gameCamera;
 import Inputs.KeyManager;
+import Inputs.MouseManager;
+import States.BattleState;
 import States.GameState;
 import States.State;
 import States.mainMenuState;
@@ -23,11 +25,13 @@ public class Game implements Runnable {
 	private Graphics g;
 	
 	//States
-	private State gameState;
-	private State mainMenuState;
+	public State gameState;
+	public State mainMenuState;
+	public State battleState;
 	
 	//Input
 	private KeyManager keyManager;
+	private MouseManager mouse;
 	
 	//Camera
 	private gameCamera camera;
@@ -40,12 +44,17 @@ public class Game implements Runnable {
 		this.width = width;
 		this.height = height;
 		keyManager = new KeyManager();
+		mouse = new MouseManager();
 	}
 	
 	//inicializa os Buffers, roda no começo do run()
 	private void init() {
 		display = new Display(title, width,height);
 		display.getFrame().addKeyListener(keyManager);
+		display.getFrame().addMouseListener(mouse);
+		display.getFrame().addMouseMotionListener(mouse);
+		display.getCanvas().addMouseListener(mouse);
+		display.getCanvas().addMouseMotionListener(mouse);
 		Assets.init();
 		
 		handler = new Handler(this);
@@ -53,7 +62,9 @@ public class Game implements Runnable {
 		
 		mainMenuState = new mainMenuState(handler);
 		gameState = new GameState(handler);
-		State.setState(gameState);
+		battleState = new BattleState(handler);
+		
+		State.setState(battleState);
 	}
 	
 	private void tick() {
@@ -110,7 +121,7 @@ public class Game implements Runnable {
 			}
 			
 			if(timer >= 1000000000) {
-				System.out.println("Ticks and Frames: " + ticks);
+				//System.out.println("Ticks and Frames: " + ticks);
 				ticks = 0;
 				timer = 0;
 			}
@@ -145,6 +156,10 @@ public class Game implements Runnable {
 	
 	public KeyManager getKeyManager() {
 		return keyManager;
+	}
+	
+	public MouseManager getMouse() {
+		return mouse;
 	}
 	
 	public gameCamera getCamera() {

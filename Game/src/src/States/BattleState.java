@@ -2,7 +2,9 @@ package States;
 
 import java.awt.Graphics;
 
+import Graphics.Assets;
 import backEnd_game.Handler;
+import backEnd_game.Launch;
 
 public class BattleState extends State {
 
@@ -13,14 +15,13 @@ public class BattleState extends State {
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void render(Graphics g) {
-		// TODO Auto-generated method stub
-		
+		g.drawImage(Assets.battleMenu,0,0,Launch.WIDTH,Launch.HEIGHT,null);
 	}
 
 }
