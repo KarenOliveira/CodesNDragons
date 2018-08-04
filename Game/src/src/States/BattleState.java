@@ -16,7 +16,6 @@ public class BattleState extends State {
 	@Override
 	public void tick() {
 		
-		
 	}
 
 	@Override
