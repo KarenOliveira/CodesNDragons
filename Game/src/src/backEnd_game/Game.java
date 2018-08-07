@@ -8,9 +8,10 @@ import Graphics.gameCamera;
 import Inputs.KeyManager;
 import Inputs.MouseManager;
 import States.BattleState;
+import States.CharCreationMenustate;
 import States.GameState;
 import States.State;
-import States.mainMenuState;
+import States.MainMenuState;
 
 public class Game implements Runnable {
 	
@@ -28,6 +29,7 @@ public class Game implements Runnable {
 	public State gameState;
 	public State mainMenuState;
 	public State battleState;
+	public State charCreationMenuState;
 	
 	//Input
 	private KeyManager keyManager;
@@ -60,10 +62,10 @@ public class Game implements Runnable {
 		handler = new Handler(this);
 		camera = new gameCamera(handler,0, 0);		
 		
-		mainMenuState = new mainMenuState(handler);
+		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
 		battleState = new BattleState(handler);
-		
+		charCreationMenuState = new CharCreationMenustate(handler);
 		State.setState(mainMenuState);
 	}
 	
@@ -104,7 +106,6 @@ public class Game implements Runnable {
 		long now;
 		long lastTime = System.nanoTime();
 		long timer = 0;
-		long ticks = 0;
 		
 		
 		while(running) {
@@ -117,12 +118,11 @@ public class Game implements Runnable {
 			tick();
 			render();
 			delta--;
-			ticks++;
+
 			}
 			
 			if(timer >= 1000000000) {
 				//System.out.println("Ticks and Frames: " + ticks);
-				ticks = 0;
 				timer = 0;
 			}
 		}
