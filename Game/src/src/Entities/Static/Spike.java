@@ -1,6 +1,5 @@
 package Entities.Static;
 
-import java.awt.Color;
 import java.awt.Graphics;
 
 import Graphics.Assets;
