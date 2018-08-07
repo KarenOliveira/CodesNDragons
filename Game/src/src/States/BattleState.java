@@ -20,7 +20,8 @@ public class BattleState extends State {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.battleMenu,0,0,Launch.WIDTH,Launch.HEIGHT,null);
+		g.drawImage(Assets.battleMenu,0,0,Launch.WIDTH/2,Launch.HEIGHT/2,null);
+		g.drawImage(Assets.battleMenu,0,383,Launch.WIDTH/2,Launch.HEIGHT/2,null);
+		g.drawImage(Assets.battleMenu,512,383,Launch.WIDTH/2,Launch.HEIGHT/2,null);
 	}
-
 }

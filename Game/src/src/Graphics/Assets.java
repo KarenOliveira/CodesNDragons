@@ -8,7 +8,7 @@ public class Assets {
 	
 	//MENUS
 	public static BufferedImage mainMenu;
-	public static BufferedImage button1;
+	public static BufferedImage[] button1;
 	public static BufferedImage battleMenu;
 	//floors
 	public static BufferedImage stonefloorSL,stonefloorSM, stonefloorSR;
@@ -40,10 +40,12 @@ public class Assets {
 		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
 		spriteSheet traps = new spriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
 		
+		button1 = new BufferedImage[2];
 		
 		//Menus
 		mainMenu = ImageLoader.loadImage("/Menus/mainMenu.jpg");
-		button1 = ImageLoader.loadImage("/Menus/Button1.jpeg");
+		button1[0] = ImageLoader.loadImage("/Menus/botao1.png");
+		button1[1] = ImageLoader.loadImage("/Menus/botao2.png");
 		battleMenu = ImageLoader.loadImage("/Menus/BattleMenu.png");
 		//Filler
 		black = ImageLoader.loadImage("/Textures/black.jpg");
