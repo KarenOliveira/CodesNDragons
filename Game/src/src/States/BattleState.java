@@ -3,9 +3,7 @@ package States;
 import java.awt.Font;
 import java.awt.Graphics;
 
-import Classes.Druida;
-import Entities.Entity;
-import Entities.EntityManager;
+import Actions.Action;
 import Entities.Player;
 import Graphics.Assets;
 import backEnd_game.Handler;
@@ -14,13 +12,9 @@ import backEnd_game.Launch;
 public class BattleState extends State {
 
 	//private UIManager uiManager;
-	private EntityManager entityManager;
-	private Player player;
-	protected static String ataques[] = new String[4];
-	public BattleState(Handler handler,Player player) {
+	private Action action;
+	public BattleState(Handler handler,Player player,Action action) {
 		super(handler);
-
-	entityManager.getEntities().get(0);
 		//	uiManager = new UIManager(handler);
 	//	handler.getMouse().setUIManager(uiManager);
 	//	
@@ -46,7 +40,7 @@ public class BattleState extends State {
 		g.drawImage(Assets.battleMenu,512,383,Launch.WIDTH/2,Launch.HEIGHT/2,null);
 		g.drawImage(Assets.dungeonBackground, 512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
 		g.drawImage(Assets.battleMenuBackground,512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
-		g.drawString("Oi", 100, 450);
+		g.drawString(action.getActionlist().get(1).getName(), 100, 450);
 		g.drawString("Mísseis Arcanos", 100, 550);
 		//uiManager.render(g);
 	}

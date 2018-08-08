@@ -3,6 +3,7 @@ package backEnd_game;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
+import Actions.Action;
 import Entities.Player;
 import Graphics.Assets;
 import Graphics.gameCamera;
@@ -41,7 +42,9 @@ public class Game implements Runnable {
 	
 	//Handler
 	private Handler handler;
-	//player
+	//action
+	private Action action;
+	//
 	private Player player;
 	
 	public Game(String title,int width, int height) {
@@ -63,12 +66,12 @@ public class Game implements Runnable {
 		Assets.init();
 		
 		handler = new Handler(this);
-		camera = new gameCamera(handler,0, 0);		
+		camera = new gameCamera(handler,0, 0);
 		
 		charCreationMenuState = new CharCreationMenuState(handler);
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
-		battleState = new BattleState(handler,player);
+		battleState = new BattleState(handler,player,action);
 		
 		State.setState(mainMenuState);
 	}

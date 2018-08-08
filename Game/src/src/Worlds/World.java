@@ -2,7 +2,6 @@ package Worlds;
 
 import java.awt.Graphics;
 
-import Classes.Druida;
 import Entities.EntityManager;
 import Entities.Player;
 import Entities.Static.Spike;
@@ -24,7 +23,7 @@ public class World {
 	
 	public World(Handler handler, String path) {
 		this.handler = handler;
-		entityManager = new EntityManager(handler, new Druida(handler, 100,100,"Druida","Lua"));
+		entityManager = new EntityManager(handler, new Player(handler, 100,100,"Druida","Lua"));
 		entityManager.addEntity(new Spike(handler, 60, 60));
 		
 		
