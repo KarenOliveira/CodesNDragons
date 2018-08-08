@@ -6,7 +6,7 @@ import backEnd_game.Handler;
 public class Mago extends Player{
 	
 	public Mago(Handler handler,float x, float y) {
-		super(handler, x, y, spec);
+		super(handler, x, y, playerclass, spec);
 		// TODO Auto-generated constructor stub
 	}
 		public void getAttack(String spec){

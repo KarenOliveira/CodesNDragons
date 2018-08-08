@@ -17,7 +17,7 @@ public class Player extends Creature{
 	protected static String playerclass;
 	protected static String spec;
 	
-	public Player(Handler handler, float x, float y, String spec) {
+	public Player(Handler handler, float x, float y,String playerclass ,String spec) {
 		super(handler, x, y,Creature.DEFAULT_WIDTH,Creature.DEFAULT_WIDTH);
 		
 		//HitBox

@@ -6,5 +6,4 @@ public class Fireball extends Action{
 	public int getDamage() {
 		return damage;
 	}
-	
 }

@@ -31,7 +31,7 @@ public class MainMenuState extends State {
 	}
 	public void enterIsPressed() {
 		if(handler.getKeyManager().enter) {
-			State.setState(handler.getGame().gameState);
+			State.setState(handler.getGame().battleState);
 		}
 	}
 	
