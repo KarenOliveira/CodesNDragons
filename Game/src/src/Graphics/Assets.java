@@ -1,5 +1,6 @@
 package Graphics;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 
 public class Assets {
@@ -10,6 +11,8 @@ public class Assets {
 	public static BufferedImage mainMenu;
 	public static BufferedImage[] button1;
 	public static BufferedImage battleMenu;
+	public static BufferedImage dungeonBackground;
+	public static BufferedImage battleMenuBackground;
 	//floors
 	public static BufferedImage stonefloorSL,stonefloorSM, stonefloorSR;
 	public static BufferedImage stonefloorML,stonefloorMM, stonefloorMR;
@@ -39,14 +42,16 @@ public class Assets {
 		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
 		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
 		spriteSheet traps = new spriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
-		
 		button1 = new BufferedImage[2];
 		
 		//Menus
 		mainMenu = ImageLoader.loadImage("/Menus/mainMenu.jpg");
+		battleMenuBackground = ImageLoader.loadImage("/Menus/backgroundbattle.png");
 		button1[0] = ImageLoader.loadImage("/Menus/botao1.png");
 		button1[1] = ImageLoader.loadImage("/Menus/botao2.png");
 		battleMenu = ImageLoader.loadImage("/Menus/BattleMenu.png");
+		dungeonBackground = ImageLoader.loadImage("/Menus/dungeonback.jpg");
+		
 		//Filler
 		black = ImageLoader.loadImage("/Textures/black.jpg");
 		//floor

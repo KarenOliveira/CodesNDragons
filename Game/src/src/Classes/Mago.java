@@ -1,27 +1,19 @@
 package Classes;
-import java.util.Scanner;
 
-import Entities.Players;
+import Entities.Player;
 import backEnd_game.Handler;
 
-public class Mago extends Players{
+public class Mago extends Player{
 	
 	public Mago(Handler handler,float x, float y) {
 		super(handler, x, y);
 		// TODO Auto-generated constructor stub
 	}
-
-
-	public static void gerarSpec() {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Escolha a sua Especialização: ");
-		String spec = sc.next();
-		
+		public void getAttack(String spec){
 		switch(spec) {
 			case "Fogo":
 				ataques[0] = "Bola de Fogo";
-				ataques[1] = "Golpe flamajante";
+				ataques[1] = "Golpe flamejante";
 				ataques[2] = "Queimar";
 				ataques[3] = "Derreter";
 				break;
@@ -39,20 +31,7 @@ public class Mago extends Players{
 				ataques[2] = "Ilusão";
 				ataques[3] = "Impacto arcano";
 				break; 
-		}
-		
-		System.out.println("Suas habilidades são:");
-		
-		for(int i=0; i<ataques.length; i++){
-			System.out.println(i + " - " + ataques[i]);
-		}
-		
+				
+		}	
 	}
-	
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

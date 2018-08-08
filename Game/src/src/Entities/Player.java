@@ -5,9 +5,10 @@ import java.awt.image.BufferedImage;
 
 import Graphics.Animations;
 import Graphics.Assets;
+import States.State;
 import backEnd_game.Handler;
 
-public class Players extends Creature{
+public class Player extends Creature{
 	
 	//Animations
 	private BufferedImage currentSprite = Assets.druid_down[0];
@@ -16,7 +17,7 @@ public class Players extends Creature{
 	String classe, raca, spec; //Especialização
 	protected static String ataques[] = new String[4];
 	
-	public Players(Handler handler, float x, float y) {
+	public Player(Handler handler, float x, float y) {
 		super(handler, x, y,Creature.DEFAULT_WIDTH,Creature.DEFAULT_WIDTH);
 		
 		//HitBox
@@ -59,6 +60,8 @@ public class Players extends Creature{
 			xMove = -vel_mov;
 		if(handler.getKeyManager().right)
 			xMove = vel_mov;
+		if(handler.getKeyManager().interact)
+			State.setState(handler.getGame().battleState);
 		
 	}
 

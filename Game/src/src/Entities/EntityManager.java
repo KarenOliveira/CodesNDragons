@@ -9,7 +9,7 @@ import backEnd_game.Handler;
 public class EntityManager {
 
 	private Handler handler;
-	private Players player;
+	private Player player;
 	private ArrayList<Entity> entities;
 	
 	private Comparator<Entity> renderComparator = new Comparator<Entity>() {
@@ -22,7 +22,7 @@ public class EntityManager {
 		}
 	};
 	
-	public EntityManager(Handler handler, Players player) {
+	public EntityManager(Handler handler, Player player) {
 		this.handler = handler;
 		this.player = player;
 		entities = new ArrayList<Entity>();
@@ -60,11 +60,11 @@ public class EntityManager {
 		this.handler = handler;
 	}
 
-	public Players getPlayer() {
+	public Player getPlayer() {
 		return player;
 	}
 
-	public void setPlayer(Players player) {
+	public void setPlayer(Player player) {
 		this.player = player;
 	}
 

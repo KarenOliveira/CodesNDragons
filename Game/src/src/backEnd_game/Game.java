@@ -8,7 +8,7 @@ import Graphics.gameCamera;
 import Inputs.KeyManager;
 import Inputs.MouseManager;
 import States.BattleState;
-import States.CharCreationMenustate;
+import States.CharCreationMenuState;
 import States.GameState;
 import States.State;
 import States.MainMenuState;
@@ -62,7 +62,7 @@ public class Game implements Runnable {
 		handler = new Handler(this);
 		camera = new gameCamera(handler,0, 0);		
 		
-		charCreationMenuState = new CharCreationMenustate(handler);
+		charCreationMenuState = new CharCreationMenuState(handler);
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
 		battleState = new BattleState(handler);

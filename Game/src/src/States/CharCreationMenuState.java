@@ -8,10 +8,10 @@ import UI.UIImageButton;
 import UI.UIManager;
 import backEnd_game.Handler;
 
-public class CharCreationMenustate extends State {
+public class CharCreationMenuState extends State {
 	private UIManager uiManager;
 
-	public CharCreationMenustate(Handler handler) {
+	public CharCreationMenuState(Handler handler) {
 		super(handler);
 		uiManager = new UIManager(handler);
 		handler.getMouse().setUIManager(uiManager);
