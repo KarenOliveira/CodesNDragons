@@ -14,10 +14,10 @@ public class Player extends Creature{
 	private BufferedImage currentSprite = Assets.druid_down[0];
 	private Animations aniDown, aniLeft, aniRight, aniUp;
 	
-	String classe, raca, spec; //Especialização
-	protected static String ataques[] = new String[4];
+	protected static String playerclass;
+	protected static String spec;
 	
-	public Player(Handler handler, float x, float y) {
+	public Player(Handler handler, float x, float y,String classe, String spec) {
 		super(handler, x, y,Creature.DEFAULT_WIDTH,Creature.DEFAULT_WIDTH);
 		
 		//HitBox
@@ -32,6 +32,9 @@ public class Player extends Creature{
 		aniLeft = new Animations(250, Assets.druid_left);
 		aniRight = new Animations(250, Assets.druid_right);
 		aniUp = new Animations(250, Assets.druid_up);
+		
+		//Class things
+		
 	}
 	
 	

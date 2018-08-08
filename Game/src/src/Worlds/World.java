@@ -15,6 +15,7 @@ public class World {
 	private int width, height;
 	private int spawnX, spawnY;
 	private int[][] worldTiles;
+	private String playerclass,spec;
 	
 	//Entities
 	private EntityManager entityManager;
@@ -22,7 +23,7 @@ public class World {
 	
 	public World(Handler handler, String path) {
 		this.handler = handler;
-		entityManager = new EntityManager(handler, new Player(handler, 100,100));
+		entityManager = new EntityManager(handler, new Player(handler, 100,100, playerclass, spec));
 		entityManager.addEntity(new Spike(handler, 60, 60));
 		
 		

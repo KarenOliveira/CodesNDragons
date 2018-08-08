@@ -4,7 +4,7 @@ import backEnd_game.Handler;
 public class Druida extends Player{
 	
 	public Druida(Handler handler, float x, float y) {
-		super(handler, x, y);
+		super(handler, x, y, playerclass, spec);
 		// TODO Auto-generated constructor stub
 	}
 

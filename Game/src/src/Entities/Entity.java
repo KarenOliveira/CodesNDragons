@@ -11,6 +11,7 @@ public abstract class Entity {
 	protected float x, y;
 	protected int width, height;
 	protected Rectangle bounds;
+	protected static String ataques[] = new String[4];
 	
 	public Entity(Handler handler, float x, float y, int width, int height) {
 		this.handler = handler;
