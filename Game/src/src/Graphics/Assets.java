@@ -1,6 +1,5 @@
 package Graphics;
 
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 
 public class Assets {
@@ -31,6 +30,8 @@ public class Assets {
 	public static BufferedImage[] druid_down, druid_left, druid_right, druid_up;
 	//StaticEntities
 	public static BufferedImage spike;
+	//cursor
+	public static BufferedImage cursor;
 	
 	
 	public static BufferedImage mainMenuBack;
@@ -94,6 +95,8 @@ public class Assets {
 		
 		//Static
 		spike = traps.crop(48, 48, width, height);
+		//cursor
+		cursor = ImageLoader.loadImage("/Menus/Cursor.png");
 		
 		//chars
 		//druid

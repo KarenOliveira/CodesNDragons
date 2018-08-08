@@ -3,6 +3,9 @@ package States;
 import java.awt.Font;
 import java.awt.Graphics;
 
+import Entities.Entity;
+import Entities.EntityManager;
+import Entities.Player;
 import Graphics.Assets;
 import UI.ClickListener;
 import UI.UIImageButton;
@@ -13,8 +16,10 @@ import backEnd_game.Launch;
 public class BattleState extends State {
 
 	//private UIManager uiManager;
+	private EntityManager entityManager;
+	private Player player;
 	
-	public BattleState(Handler handler) {
+	public BattleState(Handler handler,Player player) {
 		super(handler);
 
 	//	uiManager = new UIManager(handler);
@@ -45,7 +50,7 @@ public class BattleState extends State {
 		g.drawImage(Assets.battleMenu,512,383,Launch.WIDTH/2,Launch.HEIGHT/2,null);
 		g.drawImage(Assets.dungeonBackground, 512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
 		g.drawImage(Assets.battleMenuBackground,512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
-		g.drawString("Ataque flamejante", 100, 450);
+		g.drawString(, 100, 450);
 		g.drawString("Mísseis Arcanos", 100, 550);
 		//uiManager.render(g);
 	}

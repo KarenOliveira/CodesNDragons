@@ -4,7 +4,7 @@ import backEnd_game.Handler;
 
 public class Patrulheiro extends Player{
 	public Patrulheiro(Handler handler, float x, float y) {
-		super(handler,x, y, playerclass, spec);
+		super(handler,x, y, spec);
 		// TODO Auto-generated constructor stub
 	}
 	public void getAttack(String spec) {

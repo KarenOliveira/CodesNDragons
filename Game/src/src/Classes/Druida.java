@@ -3,8 +3,8 @@ import Entities.Player;
 import backEnd_game.Handler;
 public class Druida extends Player{
 	
-	public Druida(Handler handler, float x, float y) {
-		super(handler, x, y, playerclass, spec);
+	public Druida(Handler handler, float x, float y,String spec) {
+		super(handler, x, y,spec);
 		// TODO Auto-generated constructor stub
 	}
 
