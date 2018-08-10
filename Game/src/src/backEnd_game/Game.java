@@ -14,6 +14,7 @@ import States.CharCreationMenuState;
 import States.GameState;
 import States.MainMenuState;
 import States.State;
+import States.winState;
 
 public class Game implements Runnable {
 	
@@ -32,6 +33,7 @@ public class Game implements Runnable {
 	public State mainMenuState;
 	public State battleState;
 	public State charCreationMenuState;
+	public State winState;
 	
 	//Input
 	private KeyManager keyManager;
@@ -71,9 +73,10 @@ public class Game implements Runnable {
 		charCreationMenuState = new CharCreationMenuState(handler);
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
-		battleState = new BattleState(handler,player,action);
+		battleState = new BattleState(handler);
+		winState = new winState(handler);
 		
-		State.setState(mainMenuState);
+		State.setState(battleState);
 	}
 	
 	private void tick() {

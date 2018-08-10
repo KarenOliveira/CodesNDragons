@@ -32,4 +32,15 @@ public class Utils {
 			return 0;
 		}
 	}
+	
+	public static void Timer(int speed) {
+		long lastTime = 0, timer = 0;
+		
+		timer += System.currentTimeMillis() - lastTime;
+		lastTime = System.currentTimeMillis();
+		
+		if(timer > speed) {
+			timer=0;
+		}
+	}
 }

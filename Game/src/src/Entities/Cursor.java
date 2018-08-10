@@ -1,5 +1,6 @@
 package Entities;
 
+import java.awt.Font;
 import java.awt.Graphics;
 
 import Graphics.Assets;
@@ -7,41 +8,41 @@ import backEnd_game.Handler;
 
 public class Cursor extends Creature{
 	
-	private int actions[] = new int[4];
-	private int currentAction;
-
+	private int currentAction = 0;
+	private boolean turno = true;
+	
 	public Cursor(Handler handler, float x, float y, int width, int height) {
 		super(handler, x, y, width, height);
 	}
 	
-	public void getInput() {
+	public void getInput() throws InterruptedException {
 		//yMove = 0;
 		
-		if(handler.getKeyManager().up && currentAction <= 3) {
-			y -= 100;
-			currentAction ++;
-		}
-		
-		else if(handler.getKeyManager().down && currentAction >= 0) {
-			x += 100;
+		if(handler.getKeyManager().up && currentAction > 0) {
+			y -= 70;
 			currentAction--;
+			Thread.sleep(100);
+			turno = false;
 		}
 		
-		else if (handler.getKeyManager().enter) {
-			//Enter(enemy);
+		else if(handler.getKeyManager().down && currentAction < 3) {
+			y += 70;
+			currentAction++;
+			Thread.sleep(100);
+			turno = false;
 		}
 		
 	}
 	
 	public void Enter(Creature enemy) {
 		if(currentAction == 0)
-			enemy.vida -= 10;
+			enemy.vida -= 1;
 		if(currentAction == 1)
-			enemy.vida -= 20;
+			enemy.vida -= 2;
 		if(currentAction == 2)
-			enemy.vida -= 30;
+			enemy.vida -= 3;
 		if(currentAction == 3)
-			enemy.vida -= 40;
+			enemy.vida -= 4;
 	}
 	
 	public int getAction() {
@@ -50,12 +51,26 @@ public class Cursor extends Creature{
 
 	@Override
 	public void tick() {
-		getInput();
+		try {
+			getInput();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.cursor,(int) (x),(int) (y), 40, 40, null);
+		
+		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 20));
+		
+		g.drawString("Personagem", 140, 50);
+		g.drawString("Mísseis Arcanos", 100, 100);
+		g.drawString("Explosão arcana", 100, 170);
+		g.drawString("Escudo arcano", 100, 240);
+		g.drawString("Impacto mental", 100, 310);
+		
 	}
 	
 }

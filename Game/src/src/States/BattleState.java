@@ -9,17 +9,17 @@ import Entities.Cursor;
 import Entities.Enemy1;
 import Entities.Player;
 import Graphics.Assets;
+import UI.battleManager;
 import backEnd_game.Handler;
 import backEnd_game.Launch;
 
 public class BattleState extends State {
 
 	//private UIManager uiManager;
-	private Action action;
+	private battleManager battleManager;
 	private Cursor cursor;
-	private Enemy1 enemy;
 	
-	public BattleState(Handler handler,Player player,Action action) {
+	public BattleState(Handler handler) {
 		super(handler);
 		//	uiManager = new UIManager(handler);
 	//	handler.getMouse().setUIManager(uiManager);
@@ -34,14 +34,19 @@ public class BattleState extends State {
 	//			
 	//		}}));
 		
-		cursor = new Cursor(handler, 100, 500, 40, 40);
-		enemy = new Enemy1(handler, 700, 200);
+		battleManager =  new battleManager(handler);
 		
 	}
 	@Override
 	public void tick() {
-		
+		try {
+			battleManager.tick();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	
 	@Override
 	public void render(Graphics g) {
 		
@@ -52,17 +57,7 @@ public class BattleState extends State {
 		g.drawImage(Assets.dungeonBackground, 512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
 		g.drawImage(Assets.battleMenuBackground,512,0, Launch.WIDTH/2 , Launch.HEIGHT/2,null);
 		
-		
-		//g.drawString(action.getActionlist().get(1).getName(), 100, 450);
-		
-		//Commands
-		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("Mísseis Arcanos", 100, 500);
-		g.drawString("Mísseis Arcanos", 100, 600);
-		g.drawString("Mísseis Arcanos", 100, 700);
-		g.drawString("Mísseis Arcanos", 100, 800);
-		
-		cursor.render(g);
+		battleManager.render(g);
 		
 		//uiManager.render(g);
 	}

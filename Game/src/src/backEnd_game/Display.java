@@ -1,6 +1,7 @@
 package backEnd_game;
 
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -28,6 +29,7 @@ public class Display {
 		frame.setResizable(false); //Não alterar o tamanho
 		frame.setLocationRelativeTo(null); //Janela aparece no centro da tela
 		frame.setVisible(true); //Janela se torna visível
+		frame.getContentPane().setBackground(Color.BLACK);
 		
 		canvas = new Canvas();
 		canvas.setPreferredSize(new Dimension(width, height));

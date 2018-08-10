@@ -13,6 +13,8 @@ public class Player extends Creature{
 	//Animations
 	private BufferedImage currentSprite = Assets.druid_down[0];
 	private Animations aniDown, aniLeft, aniRight, aniUp;
+	private final int MAX_HEALTH = 1000;
+	public int vida;
 	
 	protected static String playerclass;
 	protected static String spec;
@@ -34,6 +36,7 @@ public class Player extends Creature{
 		aniUp = new Animations(250, Assets.druid_up);
 		
 		//Class things
+		vida = MAX_HEALTH;
 		
 	}
 	
