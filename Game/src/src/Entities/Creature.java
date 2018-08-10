@@ -13,6 +13,7 @@ public abstract class Creature extends Entity {
 	protected  int forca, inteligencia, defesa, iniciativa;
 	protected float vel_mov;
 	protected String nomeChar;
+	protected String log = "";
 	
 	public float xMove, yMove;
 	

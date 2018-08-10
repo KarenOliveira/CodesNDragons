@@ -15,23 +15,14 @@ public class winState extends State {
 
 	@Override
 	public void tick() {
-		if (contador > 0) {
-			
-			try {
-				Thread.sleep(3000);
-				State.setState(handler.getGame().gameState);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			contador = 0;
+		if(handler.getKeyManager().interact) {
+			State.setState(handler.getGame().gameState);
 		}
 	}
 
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(ImageLoader.loadImage("/Menus/youwin.jpg"),0,0,1024,768,null);
-		contador++;
 	}
 
 }

@@ -99,6 +99,7 @@ public class Assets {
 		cursor = ImageLoader.loadImage("/Menus/Cursor.png");
 		
 		//chars
+		enemy1 = ImageLoader.loadImage("/Textures/Characters/enemy1.png");
 		//druid
 		
 		druid_down = new BufferedImage[4];

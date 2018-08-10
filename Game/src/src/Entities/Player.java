@@ -2,6 +2,7 @@ package Entities;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 import Graphics.Animations;
 import Graphics.Assets;
@@ -18,6 +19,9 @@ public class Player extends Creature{
 	
 	protected static String playerclass;
 	protected static String spec;
+	
+	private Random rng = new Random();
+	private int r;
 	
 	public Player(Handler handler, float x, float y,String playerclass ,String spec) {
 		super(handler, x, y,Creature.DEFAULT_WIDTH,Creature.DEFAULT_WIDTH);
@@ -58,17 +62,27 @@ public class Player extends Creature{
 		xMove = 0;
 		yMove = 0;
 		
-		if(handler.getKeyManager().up)
-			yMove = -vel_mov;
-		if(handler.getKeyManager().down)
-			yMove = vel_mov;
-		if(handler.getKeyManager().left)
-			xMove = -vel_mov;
-		if(handler.getKeyManager().right)
-			xMove = vel_mov;
-		if(handler.getKeyManager().interact)
-			State.setState(handler.getGame().battleState);
+		r = rng.nextInt(1000);
 		
+		if(handler.getKeyManager().up) {
+			yMove = -vel_mov;
+			if(r == 1) State.setState(handler.getGame().battleState);
+		}
+		
+		if(handler.getKeyManager().down) {
+			yMove = vel_mov;
+			if(r == 1) State.setState(handler.getGame().battleState);
+		}
+		
+		if(handler.getKeyManager().left) {
+			xMove = -vel_mov;
+			if(r == 1) State.setState(handler.getGame().battleState);
+		}
+		
+		if(handler.getKeyManager().right) {
+			xMove = vel_mov;
+			if(r == 1) State.setState(handler.getGame().battleState);
+		}
 	}
 
 	public void render(Graphics g) {

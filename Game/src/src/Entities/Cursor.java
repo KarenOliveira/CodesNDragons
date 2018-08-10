@@ -11,7 +11,6 @@ import backEnd_game.Handler;
 public class Cursor extends Creature{
 	
 	private int currentAction = 0;
-	private boolean turno = true;
 	private ArrayList<Action> actionlist = new ArrayList<Action>();
 	
 	public Cursor(Handler handler, float x, float y, int width, int height) {
@@ -19,6 +18,7 @@ public class Cursor extends Creature{
 		
 		actionlist.add(new Starfall());
 		actionlist.add(new Starfire());
+		actionlist.add(new Regrowth());
 		actionlist.add(new Regrowth());
 	}
 	
@@ -28,22 +28,25 @@ public class Cursor extends Creature{
 			y -= 35;
 			currentAction--;
 			Thread.sleep(100);
-			turno = false;
 		}
 		
 		else if(handler.getKeyManager().down && currentAction < 3) {
 			y += 35;
 			currentAction++;
 			Thread.sleep(100);
-			turno = false;
 		}
 		
 	}
 	
 	public void enter(Creature enemy) {
-		if(actionlist.get(currentAction).isDamageAction())
-		actionlist.get(currentAction).acao(enemy);
-		else actionlist.get(currentAction).acao(this);
+		if(actionlist.get(currentAction).isDamageAction()) {
+			actionlist.get(currentAction).acao(enemy);
+			log = actionlist.get(currentAction).getLog();
+		}
+		else {
+			actionlist.get(currentAction).acao(this);
+			log = actionlist.get(currentAction).getLog();
+		}
 	}
 	
 	public int getAction() {
@@ -70,9 +73,10 @@ public class Cursor extends Creature{
 		g.drawString(actionlist.get(1).getName(), 100, 135);
 		g.drawString(actionlist.get(2).getName(), 100, 170);
 		g.drawString("Impacto mental", 100, 205);
+		g.drawString(log, 550, 500);
+		
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
 		g.drawString("Player - HP:   " + vida + "/" + MAX_HEALTH, 50, 500);
-		
 	}
 	
 }

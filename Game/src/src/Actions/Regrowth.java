@@ -10,6 +10,7 @@ public class Regrowth extends Action{
 		this.name = "Regrowth";
 		this.heal = 10;
 		this.isDamageAction = false;
+		this.log = "Player curou 10 de vida";
 	}
 	
 	public void tick() {

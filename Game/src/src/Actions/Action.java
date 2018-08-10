@@ -7,7 +7,7 @@ import Entities.Creature;
 public class Action {
 	
 	protected int damage,heal;
-	protected String name;
+	protected String name, log;
 	protected boolean isDamageAction;
 	
 	public String getName() {
@@ -28,6 +28,10 @@ public class Action {
 
 	public boolean isDamageAction() {
 		return isDamageAction;
+	}
+	
+	public String getLog() {
+		return log;
 	}
 	
 }
