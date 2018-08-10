@@ -5,7 +5,7 @@ import backEnd_game.Handler;
 
 public abstract class Creature extends Entity {
 
-	public static final int DEFAULT_HEALTH = 10;
+	public static final int MAX_HEALTH = 100;
 	public static final float DEFAULT_SPEED = 3.0f;
 	public static final int DEFAULT_WIDTH = 64	;
 	protected static String ataques[] = new String[4];
@@ -18,7 +18,7 @@ public abstract class Creature extends Entity {
 	
 	public Creature(Handler handler, float x, float y, int width, int height) {
 		super(handler, x, y, width, height);
-		vida = DEFAULT_HEALTH;
+		vida = MAX_HEALTH;
 		vel_mov = DEFAULT_SPEED;
 		xMove = 0;
 		yMove = 0;

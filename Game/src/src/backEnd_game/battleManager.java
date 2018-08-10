@@ -1,11 +1,10 @@
-package UI;
+package backEnd_game;
 
 import java.awt.Graphics;
 
 import Entities.Cursor;
 import Entities.Enemy1;
 import States.State;
-import backEnd_game.Handler;
 
 public class battleManager {
 
@@ -23,7 +22,7 @@ public class battleManager {
 	public void tick() throws InterruptedException {
 		if(handler.getKeyManager().enter) { 
 			Thread.sleep(200);
-			cursor.Enter(enemy);
+			cursor.enter(enemy);
 		}
 		
 		cursor.tick();

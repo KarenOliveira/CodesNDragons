@@ -2,14 +2,13 @@ package Actions;
 
 import java.awt.Graphics;
 
-public abstract class Action {
+import Entities.Creature;
+
+public class Action {
 	
-	protected int damage;
+	protected int damage,heal;
 	protected String name;
-	
-	public Action(int id) {
-		
-	}
+	protected boolean isDamageAction;
 	
 	public String getName() {
 		return name;
@@ -21,6 +20,14 @@ public abstract class Action {
 	
 	public void render(Graphics g) {
 		
+	}
+
+	public void acao(Creature c) {
+		// TODO Auto-generated method stub
+	}
+
+	public boolean isDamageAction() {
+		return isDamageAction;
 	}
 	
 }

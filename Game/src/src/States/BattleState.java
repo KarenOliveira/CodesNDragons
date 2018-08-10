@@ -3,9 +3,9 @@ package States;
 import java.awt.Graphics;
 
 import Graphics.Assets;
-import UI.battleManager;
 import backEnd_game.Handler;
 import backEnd_game.Launch;
+import backEnd_game.battleManager;
 
 public class BattleState extends State {
 
