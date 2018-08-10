@@ -16,7 +16,7 @@ public class battleManager {
 	public battleManager(Handler handler) {
 		this.handler = handler;
 		cursor = new Cursor(handler, 60, 80, 40, 40);
-		enemy = new Enemy1(handler, 700, 200);
+		enemy = new Enemy1(handler, 570, 160,400,180);
 	}
 	
 	
@@ -33,8 +33,6 @@ public class battleManager {
 			enemy.setVida(Enemy1.MAX_HEALTH);
 			State.setState(handler.getGame().winState);
 		}
-		
-		
 		
 	}
 	

@@ -28,11 +28,11 @@ public class Assets {
 	public static BufferedImage corridorHS,corridorHM,corridorHI;
 	//chars
 	public static BufferedImage[] druid_down, druid_left, druid_right, druid_up;
+	public static BufferedImage enemy1;
 	//StaticEntities
 	public static BufferedImage spike;
 	//cursor
 	public static BufferedImage cursor;
-	
 	
 	public static BufferedImage mainMenuBack;
 	public static BufferedImage black;

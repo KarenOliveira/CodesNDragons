@@ -18,15 +18,15 @@ public class Cursor extends Creature{
 	public void getInput() throws InterruptedException {
 		//yMove = 0;
 		
-		if(handler.getKeyManager().up && currentAction > 0) {
-			y -= 70;
+		if(handler.getKeyManager().up && currentAction > 0 && turno == true) {
+			y -= 35;
 			currentAction--;
 			Thread.sleep(100);
 			turno = false;
 		}
 		
-		else if(handler.getKeyManager().down && currentAction < 3) {
-			y += 70;
+		else if(handler.getKeyManager().down && currentAction < 3 && turno == true) {
+			y += 35;
 			currentAction++;
 			Thread.sleep(100);
 			turno = false;
@@ -67,9 +67,9 @@ public class Cursor extends Creature{
 		
 		g.drawString("Personagem", 140, 50);
 		g.drawString("Mísseis Arcanos", 100, 100);
-		g.drawString("Explosão arcana", 100, 170);
-		g.drawString("Escudo arcano", 100, 240);
-		g.drawString("Impacto mental", 100, 310);
+		g.drawString("Explosão arcana", 100, 135);
+		g.drawString("Escudo arcano", 100, 170);
+		g.drawString("Impacto mental", 100, 205);
 		
 	}
 	
