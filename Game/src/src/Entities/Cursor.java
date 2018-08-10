@@ -76,7 +76,7 @@ public class Cursor extends Creature{
 		g.drawString(log, 550, 500);
 		
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("Player - HP:   " + vida + "/" + MAX_HEALTH, 50, 500);
+		g.drawString("Player - HP:   " + health + "/" + MAX_HEALTH, 50, 500);
 	}
 	
 }

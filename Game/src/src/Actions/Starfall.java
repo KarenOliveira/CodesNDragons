@@ -10,7 +10,7 @@ public class Starfall extends Action{
 		this.name = "Starfall";
 		this.damage = 10;
 		this.isDamageAction = true;
-		this.log = "Inimigo perdeu 10 de vida";
+		this.log = "Enemy lost 10 health";
 	}
 	
 	public void tick() {

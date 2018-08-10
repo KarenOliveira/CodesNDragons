@@ -9,7 +9,7 @@ public abstract class Creature extends Entity {
 	public static final float DEFAULT_SPEED = 3.0f;
 	public static final int DEFAULT_WIDTH = 64	;
 	protected static String ataques[] = new String[4];
-	protected int vida = 10;
+	protected int health = 10;
 	protected  int forca, inteligencia, defesa, iniciativa;
 	protected float vel_mov;
 	protected String nomeChar;
@@ -19,7 +19,7 @@ public abstract class Creature extends Entity {
 	
 	public Creature(Handler handler, float x, float y, int width, int height) {
 		super(handler, x, y, width, height);
-		vida = MAX_HEALTH;
+		health = MAX_HEALTH;
 		vel_mov = DEFAULT_SPEED;
 		xMove = 0;
 		yMove = 0;
@@ -97,11 +97,11 @@ public abstract class Creature extends Entity {
 	}
 
 	public int getVida() {
-		return vida;
+		return health;
 	}
 
 	public void setVida(int vida) {
-		this.vida = vida;
+		this.health = vida;
 	}
 
 	public float getVel_mov() {

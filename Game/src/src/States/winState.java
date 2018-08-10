@@ -6,8 +6,6 @@ import Graphics.ImageLoader;
 import backEnd_game.Handler;
 
 public class winState extends State {
-
-	public int contador = 0;
 	
 	public winState(Handler handler) {
 		super(handler);
