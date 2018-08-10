@@ -60,7 +60,7 @@ public class Game implements Runnable {
 		battleState = new BattleState(handler);
 		winState = new winState(handler);
 		
-		State.setState(battleState);
+		State.setState(mainMenuState);
 	}
 	
 	private void tick() {

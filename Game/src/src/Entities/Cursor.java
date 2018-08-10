@@ -19,7 +19,7 @@ public class Cursor extends Creature{
 		actionlist.add(new Starfall());
 		actionlist.add(new Starfire());
 		actionlist.add(new Regrowth());
-		actionlist.add(new Regrowth());
+		actionlist.add(new Moonfire());
 	}
 	
 	public void getInput() throws InterruptedException {
@@ -72,7 +72,7 @@ public class Cursor extends Creature{
 		g.drawString(actionlist.get(0).getName(), 100, 100);
 		g.drawString(actionlist.get(1).getName(), 100, 135);
 		g.drawString(actionlist.get(2).getName(), 100, 170);
-		g.drawString("Impacto mental", 100, 205);
+		g.drawString(actionlist.get(3).getName(), 100, 205);
 		g.drawString(log, 550, 500);
 		
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
