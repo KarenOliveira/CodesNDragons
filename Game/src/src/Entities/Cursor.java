@@ -70,7 +70,8 @@ public class Cursor extends Creature{
 		g.drawString(actionlist.get(1).getName(), 100, 135);
 		g.drawString(actionlist.get(2).getName(), 100, 170);
 		g.drawString("Impacto mental", 100, 205);
-		g.drawString("Vida:   " + vida + "/" + MAX_HEALTH, 600, 500);
+		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
+		g.drawString("Player - HP:   " + vida + "/" + MAX_HEALTH, 50, 500);
 		
 	}
 	

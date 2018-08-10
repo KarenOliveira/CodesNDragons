@@ -24,7 +24,7 @@ public class Enemy1 extends Creature{
 	public void render(Graphics g) {
 		g.drawImage(ImageLoader.loadImage("/Textures/Characters/enemy1.png"), (int) x,(int) y, width, height, null);
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("Vida:   " + vida + "/" + MAX_HEALTH, 600, 500);
+		g.drawString("Enemy - HP:   " + vida + "/" + MAX_HEALTH, 50, 600);
 	}
 
 }
