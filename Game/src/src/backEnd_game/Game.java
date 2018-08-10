@@ -3,14 +3,10 @@ package backEnd_game;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
-import Actions.Action;
-import Entities.Player;
 import Graphics.Assets;
 import Graphics.gameCamera;
 import Inputs.KeyManager;
-import Inputs.MouseManager;
 import States.BattleState;
-import States.CharCreationMenuState;
 import States.GameState;
 import States.MainMenuState;
 import States.State;
@@ -37,40 +33,28 @@ public class Game implements Runnable {
 	
 	//Input
 	private KeyManager keyManager;
-	private MouseManager mouse;
-	
 	//Camera
 	private gameCamera camera;
 	
 	//Handler
 	private Handler handler;
-	//action
-	private Action action;
-	//
-	private Player player;
 	
 	public Game(String title,int width, int height) {
 		this.title = title;
 		this.width = width;
 		this.height = height;
 		keyManager = new KeyManager();
-		mouse = new MouseManager();
 	}
 	
 	//inicializa os Buffers, roda no começo do run()
 	private void init() {
 		display = new Display(title, width,height);
 		display.getFrame().addKeyListener(keyManager);
-		display.getFrame().addMouseListener(mouse);
-		display.getFrame().addMouseMotionListener(mouse);
-		display.getCanvas().addMouseListener(mouse);
-		display.getCanvas().addMouseMotionListener(mouse);
 		Assets.init();
 		
 		handler = new Handler(this);
 		camera = new gameCamera(handler,0, 0);
 		
-		charCreationMenuState = new CharCreationMenuState(handler);
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
 		battleState = new BattleState(handler);
@@ -166,10 +150,6 @@ public class Game implements Runnable {
 	
 	public KeyManager getKeyManager() {
 		return keyManager;
-	}
-	
-	public MouseManager getMouse() {
-		return mouse;
 	}
 	
 	public gameCamera getCamera() {

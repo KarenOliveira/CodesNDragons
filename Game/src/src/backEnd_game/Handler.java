@@ -2,7 +2,6 @@ package backEnd_game;
 
 import Graphics.gameCamera;
 import Inputs.KeyManager;
-import Inputs.MouseManager;
 import Worlds.World;
 
 public class Handler {
@@ -22,10 +21,6 @@ public class Handler {
 	
 	public KeyManager getKeyManager() {
 		return game.getKeyManager();
-	}
-	
-	public MouseManager getMouse() {
-		return game.getMouse();
 	}
 	
 	public int getWidth() {

@@ -16,16 +16,15 @@ public class Cursor extends Creature{
 	}
 	
 	public void getInput() throws InterruptedException {
-		//yMove = 0;
 		
-		if(handler.getKeyManager().up && currentAction > 0 && turno == true) {
+		if(handler.getKeyManager().up && currentAction > 0) {
 			y -= 35;
 			currentAction--;
 			Thread.sleep(100);
 			turno = false;
 		}
 		
-		else if(handler.getKeyManager().down && currentAction < 3 && turno == true) {
+		else if(handler.getKeyManager().down && currentAction < 3) {
 			y += 35;
 			currentAction++;
 			Thread.sleep(100);
