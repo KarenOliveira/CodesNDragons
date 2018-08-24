@@ -15,7 +15,6 @@ public class World {
 	private int width, height;
 	private int spawnX, spawnY;
 	private int[][] worldTiles;
-	private String spec;
 	
 	//Entities
 	private EntityManager entityManager;

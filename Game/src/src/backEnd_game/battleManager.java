@@ -3,21 +3,21 @@ package backEnd_game;
 import java.awt.Graphics;
 
 import Entities.Cursor;
-import Entities.Enemy1;
+import Entities.Enemy;
 import States.State;
 
 public class battleManager {
 
 	private Handler handler;
 	private Cursor cursor;
-	private Enemy1 enemy;
+	private Enemy enemy;
 	
 	private boolean turno = true;
 	
 	public battleManager(Handler handler) {
 		this.handler = handler;
 		cursor = new Cursor(handler, 60, 80, 40, 40);
-		enemy = new Enemy1(handler, 570, 160,400,180);
+		enemy = new Enemy(handler, 570, 160,400,180);
 	}
 	
 	public void tick() throws InterruptedException {
@@ -38,13 +38,13 @@ public class battleManager {
 		}
 		
 		if(enemy.getVida() <= 0) {
-			enemy.setVida(Enemy1.MAX_HEALTH);
+			enemy.setVida(Enemy.MAX_HEALTH);
 			State.setState(handler.getGame().winState);
 		}
 		
 		if(cursor.getVida() <= 0) {
 			cursor.setVida(Cursor.MAX_HEALTH);
-			State.setState(handler.getGame().winState);
+			State.setState(handler.getGame().defeatState);
 		}
 			
 		

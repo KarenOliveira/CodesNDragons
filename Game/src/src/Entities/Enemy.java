@@ -7,11 +7,11 @@ import Graphics.Assets;
 import Graphics.ImageLoader;
 import backEnd_game.Handler;
 
-public class Enemy1 extends Creature{
+public class Enemy extends Creature{
 
 	public final static int MAX_HEALTH = 150;
 
-	public Enemy1(Handler handler, float x, float y, int width, int height) {
+	public Enemy(Handler handler, float x, float y, int width, int height) {
 		super(handler,x,y, width, height);
 		health = MAX_HEALTH;
 	}

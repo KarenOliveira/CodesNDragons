@@ -18,7 +18,7 @@ public class defeatState extends State {
 	@Override
 	public void tick() {
 		if(handler.getKeyManager().interact) {
-			State.setState(handler.getGame().mainMenuState);
+			System.exit(0);
 		}
 	}
 

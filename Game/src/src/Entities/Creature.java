@@ -8,11 +8,8 @@ public abstract class Creature extends Entity {
 	public static final int MAX_HEALTH = 100;
 	public static final float DEFAULT_SPEED = 3.0f;
 	public static final int DEFAULT_WIDTH = 64	;
-	protected static String ataques[] = new String[4];
 	protected int health = 10;
-	protected  int forca, inteligencia, defesa, iniciativa;
 	protected float vel_mov;
-	protected String nomeChar;
 	protected String log = "";
 	
 	public float xMove, yMove;

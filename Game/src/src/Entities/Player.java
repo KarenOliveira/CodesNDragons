@@ -62,7 +62,7 @@ public class Player extends Creature{
 		xMove = 0;
 		yMove = 0;
 		
-		r = rng.nextInt(1000);
+		r = rng.nextInt(100);
 		
 		if(handler.getKeyManager().up) {
 			yMove = -vel_mov;

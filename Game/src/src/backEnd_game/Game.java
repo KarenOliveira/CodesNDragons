@@ -28,7 +28,7 @@ public class Game implements Runnable {
 	public State gameState;
 	public State mainMenuState;
 	public State battleState;
-	public State charCreationMenuState;
+	public State defeatState;
 	public State winState;
 	
 	//Input
@@ -59,6 +59,7 @@ public class Game implements Runnable {
 		gameState = new GameState(handler);
 		battleState = new BattleState(handler);
 		winState = new winState(handler);
+		defeatState = new States.defeatState(handler);
 		
 		State.setState(mainMenuState);
 	}
