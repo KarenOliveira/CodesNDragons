@@ -3,7 +3,6 @@ package backEnd_game;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 
 public class Display {
@@ -11,10 +10,10 @@ public class Display {
 	private JFrame frame;
 	private Canvas canvas;
 	private int width, height;
-	
 	private String title;
 	
 	public Display(String title, int width, int height) {
+		
 		this.title = title;
 		this.width = width;
 		this.height = height;
@@ -23,8 +22,13 @@ public class Display {
 	}
 	
 	private void createDisplay() {
+		
 		frame = new JFrame(title); //Título
 		frame.setSize(width, height); //Tamanho em pixels
+		///RENAN
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		frame.setUndecorated(true);
+		//RENAN END
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Fechar frame quando fechar Janela
 		frame.setResizable(false); //Não alterar o tamanho
 		frame.setLocationRelativeTo(null); //Janela aparece no centro da tela
@@ -42,11 +46,12 @@ public class Display {
 	}
 	
 	public Canvas getCanvas() {
+		
 		return canvas;
 	}
 	
 	public JFrame getFrame() {
+		
 		return frame;
-	}
-	
+	}	
 }
