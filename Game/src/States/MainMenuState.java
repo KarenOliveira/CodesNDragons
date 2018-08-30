@@ -22,7 +22,7 @@ public class MainMenuState extends State {
 	}
 	
 	public void render(Graphics g) {
-		g.drawImage(Assets.mainMenu,0,0,1024,768,null);
+		g.drawImage(Assets.mainMenu,0,0,handler.getWidth(),handler.getHeight(),null);
 		g.drawImage(Assets.button1[0], 262, 300, 500, 150,null);
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 50));
 		g.drawString("New Game", 400, 390);

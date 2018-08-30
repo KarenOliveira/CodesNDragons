@@ -22,9 +22,9 @@ public class defeatState extends State {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.black,0,0,1024,768,null);
+		g.drawImage(Assets.black,0,0,handler.getWidth(),handler.getHeight(),null);
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("YOU DIED", 300, 500);
+		g.drawString("YOU DIED", handler.getWidth()/2, handler.getHeight()/2);
 	}
 
 }
