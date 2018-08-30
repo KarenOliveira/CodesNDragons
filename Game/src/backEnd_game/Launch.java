@@ -19,8 +19,8 @@ public class Launch {
 
 	public static void main(String[] args) {
 
-		MakeSound mk = new MakeSound();
-		mk.playSound("res/sounds/dungeon.wav");
+		//MakeSound mk = new MakeSound();
+		//mk.playSound("res/sounds/dungeon.wav");
 		Game jogo = new Game("CodesN'Dragons", WIDTH, HEIGHT);
 		jogo.start();
 		
