@@ -28,10 +28,9 @@ public class Enemy extends Creature{
 
 	@Override
 	public void render(Graphics g) {
-		
 		g.drawImage(Assets.enemy1, (int) x,(int) y, width, height, null);
-		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("Enemy - HP:   " + health + "/" + MAX_HEALTH, 50, 600);
-		g.drawString(log, 550, 570);
+		handler.getGame().getText().centerTextUpperLeft(g, "Enemy - HP:   " + health + "/" + MAX_HEALTH, new Font("Comic Sans MS", Font.ITALIC, 40), 50, 600);
+		//g.drawString(log, 550, 570);
+		handler.getGame().getText().centerTextUpperLeft(g, log, new Font("Comic Sans MS", Font.ITALIC, 40), handler.getWidth()/2+70, handler.getHeight()/2+140);
 	}
-}
+}	

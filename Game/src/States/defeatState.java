@@ -3,8 +3,6 @@ package States;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Shape;
-import java.awt.geom.Line2D;
 
 import Graphics.Assets;
 import backEnd_game.Handler;
@@ -27,9 +25,8 @@ public class defeatState extends State {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.black,0,0,handler.getWidth(),handler.getHeight(),null);
-		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
 		g.setColor(Color.red);
-		g.drawString("YOU DIED", handler.getWidth()/2-100, handler.getHeight()/2+15);
+		handler.getGame().getText().centerTextOnPosition(g, "YOU DIED",new Font("Comic Sans MS", Font.ITALIC, 40), handler.getWidth()/2, handler.getHeight()/2);
 	}
 
 }
