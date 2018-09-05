@@ -65,15 +65,13 @@ public class Cursor extends Creature{
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.cursor,(int) (x),(int) (y), 40, 40, null);
-		
-		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 20));
-		
-		g.drawString("Personagem", 140, 50);
-		g.drawString(actionlist.get(0).getName(), 100, 100);
-		g.drawString(actionlist.get(1).getName(), 100, 135);
-		g.drawString(actionlist.get(2).getName(), 100, 170);
-		g.drawString(actionlist.get(3).getName(), 100, 205);
-		g.drawString(log, 550, 500);
+		handler.getGame().getText().centerTextOnPosition(g, "Personagem", new Font("Comic Sans MS", Font.ITALIC, 20), handler.getWidth()/4, 50);
+		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(0).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 100);
+		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(1).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 135);
+		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(2).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 170);
+		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(3).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 205);
+		//g.drawString(log, 550, 500);
+		handler.getGame().getText().centerTextUpperLeft(g, log, new Font("Comic Sans MS", Font.ITALIC, 40), handler.getWidth()/2+70, (int) (3*(handler.getHeight()/4)));
 		
 		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
 		g.drawString("Player - HP:   " + health + "/" + MAX_HEALTH, 50, 500);
