@@ -1,10 +1,10 @@
-package States;
+package states;
 
 import java.awt.Font;
 import java.awt.Graphics;
 
-import Graphics.Assets;
 import backEnd_game.Handler;
+import graphics.Assets;
 
 public class MainMenuState extends State {
 	

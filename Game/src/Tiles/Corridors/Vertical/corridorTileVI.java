@@ -1,7 +1,7 @@
 package Tiles.Corridors.Vertical;
 
-import Graphics.Assets;
 import Tiles.Tile;
+import graphics.Assets;
 
 public class corridorTileVI extends Tile{
 	public corridorTileVI(int id) {

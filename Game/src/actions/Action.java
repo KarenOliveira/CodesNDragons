@@ -1,4 +1,4 @@
-package Actions;
+package actions;
 
 import java.awt.Graphics;
 import Entities.Creature;

@@ -1,13 +1,13 @@
-package States;
+package states;
 
 import java.awt.Graphics;
 
-import Graphics.ImageLoader;
 import backEnd_game.Handler;
+import graphics.ImageLoader;
 
-public class winState extends State {
+public class WinState extends State {
 	
-	public winState(Handler handler) {
+	public WinState(Handler handler) {
 		super(handler);
 	}
 

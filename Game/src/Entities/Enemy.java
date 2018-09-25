@@ -2,8 +2,9 @@ package Entities;
 
 import java.awt.Font;
 import java.awt.Graphics;
-import Graphics.Assets;
+
 import backEnd_game.Handler;
+import graphics.Assets;
 
 public class Enemy extends Creature{
 

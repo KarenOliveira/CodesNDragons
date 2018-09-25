@@ -1,12 +1,12 @@
-package Graphics;
+package graphics;
 
 import java.awt.image.BufferedImage;
 
-public class spriteSheet {
+public class SpriteSheet {
 
 	private BufferedImage sheet;
 	
-	public spriteSheet(BufferedImage sheet) {
+	public SpriteSheet(BufferedImage sheet) {
 		this.sheet = sheet;
 	}
 	

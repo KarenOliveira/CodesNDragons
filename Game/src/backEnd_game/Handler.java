@@ -1,8 +1,8 @@
 package backEnd_game;
 
-import Graphics.gameCamera;
-import Inputs.KeyManager;
 import Worlds.World;
+import graphics.GameCamera;
+import inputs.KeyManager;
 
 public class Handler {
 
@@ -14,7 +14,7 @@ public class Handler {
 		this.game = game;
 	}
 	
-	public gameCamera getCamera() {
+	public GameCamera getCamera() {
 		
 		return game.getCamera();
 	}

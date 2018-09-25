@@ -4,10 +4,10 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import Graphics.Animations;
-import Graphics.Assets;
-import States.State;
 import backEnd_game.Handler;
+import graphics.Animations;
+import graphics.Assets;
+import states.State;
 
 public class Player extends Creature{
 	

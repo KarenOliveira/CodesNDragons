@@ -2,8 +2,6 @@ package backEnd_game;
 
 import java.awt.Dimension;
 
-import Utils.MakeSound;
-
 public class Launch {
 
 	//RENAN

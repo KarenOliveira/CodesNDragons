@@ -1,4 +1,4 @@
-package States;
+package states;
 
 import java.awt.Graphics;
 

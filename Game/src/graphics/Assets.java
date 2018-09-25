@@ -1,4 +1,4 @@
-	package Graphics;
+	package graphics;
 
 import java.awt.image.BufferedImage;
 
@@ -39,10 +39,10 @@ public class Assets {
 	
 	
 	public static void init() {
-		spriteSheet floors = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Floor.png"));
-		spriteSheet walls = new spriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
-		spriteSheet druid = new spriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
-		spriteSheet traps = new spriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
+		SpriteSheet floors = new SpriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Floor.png"));
+		SpriteSheet walls = new SpriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
+		SpriteSheet druid = new SpriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
+		SpriteSheet traps = new SpriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
 		button1 = new BufferedImage[2];
 		
 		//Menus

@@ -1,15 +1,15 @@
-package Graphics;
+package graphics;
 
 import Entities.Entity;
 import backEnd_game.Handler;
 
-public class gameCamera {
+public class GameCamera {
 
 	private Handler handler;
 	private float xOffset; 
 	private float yOffset;
 	
-	public gameCamera(Handler handler, float xOffset, float yOffset) {
+	public GameCamera(Handler handler, float xOffset, float yOffset) {
 		this.handler = handler;
 		this.xOffset = xOffset;
 		this.yOffset = yOffset;

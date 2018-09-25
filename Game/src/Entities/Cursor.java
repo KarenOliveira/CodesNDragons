@@ -4,9 +4,9 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-import Actions.*;
-import Graphics.Assets;
+import actions.*;
 import backEnd_game.Handler;
+import graphics.Assets;
 
 public class Cursor extends Creature{
 	

@@ -6,8 +6,8 @@ import Entities.EntityManager;
 import Entities.Player;
 import Entities.Static.Spike;
 import Tiles.Tile;
-import Utils.Utils;
 import backEnd_game.Handler;
+import utils.Utils;
 
 public class World {
 

@@ -1,6 +1,6 @@
 package Tiles;
 
-import Graphics.Assets;
+import graphics.Assets;
 
 public class blackTile extends Tile{
 	public blackTile(int id) {

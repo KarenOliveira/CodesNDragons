@@ -1,7 +1,7 @@
 package Tiles.Floors;
 
-import Graphics.Assets;
 import Tiles.Tile;
+import graphics.Assets;
 
 public class stonefloorTileX extends Tile{
 	public stonefloorTileX(int id) {

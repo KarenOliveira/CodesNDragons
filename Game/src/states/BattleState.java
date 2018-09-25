@@ -1,18 +1,18 @@
-package States;
+package states;
 
 import java.awt.Graphics;
 
-import Graphics.Assets;
 import backEnd_game.Handler;
-import backEnd_game.battleManager;
+import graphics.Assets;
+import backEnd_game.BattleManager;
 
 public class BattleState extends State {
 
-	private battleManager battleManager;
+	private BattleManager battleManager;
 	
 	public BattleState(Handler handler) {
 		super(handler);
-		battleManager =  new battleManager(handler);
+		battleManager =  new BattleManager(handler);
 		
 	}
 	@Override

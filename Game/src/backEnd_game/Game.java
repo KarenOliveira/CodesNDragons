@@ -2,15 +2,16 @@ package backEnd_game;
 
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import Graphics.Assets;
-import Graphics.gameCamera;
-import Inputs.KeyManager;
-import States.BattleState;
-import States.GameState;
-import States.MainMenuState;
-import States.State;
-import States.winState;
-import Graphics.Text;
+
+import graphics.Assets;
+import graphics.Text;
+import inputs.KeyManager;
+import states.BattleState;
+import states.GameState;
+import states.MainMenuState;
+import states.State;
+import states.WinState;
+import graphics.GameCamera;
 
 public class Game implements Runnable {
 	
@@ -34,7 +35,7 @@ public class Game implements Runnable {
 	//Input
 	private KeyManager keyManager;
 	//Camera
-	private gameCamera camera;
+	private GameCamera camera;
 	//Text
 	private Text text;
 	//Handler
@@ -56,14 +57,14 @@ public class Game implements Runnable {
 		Assets.init();
 		
 		handler = new Handler(this);
-		camera = new gameCamera(handler,0, 0);
+		camera = new GameCamera(handler,0, 0);
 		text = new Text();
 		
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
 		battleState = new BattleState(handler);
-		winState = new winState(handler);
-		defeatState = new States.defeatState(handler);
+		winState = new WinState(handler);
+		defeatState = new states.DefeatState(handler);
 		
 		State.setState(battleState);
 	}
@@ -168,7 +169,7 @@ public class Game implements Runnable {
 		return keyManager;
 	}
 	
-	public gameCamera getCamera() {
+	public GameCamera getCamera() {
 		
 		return camera;
 	}

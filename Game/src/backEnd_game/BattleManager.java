@@ -3,10 +3,10 @@ package backEnd_game;
 import java.awt.Graphics;
 import Entities.Cursor;
 import Entities.Enemy;
-import Graphics.Assets;
-import States.State;
+import graphics.Assets;
+import states.State;
 
-public class battleManager {
+public class BattleManager {
 
 	private Handler handler;
 	private Cursor cursor;
@@ -14,7 +14,7 @@ public class battleManager {
 	
 	private boolean turno = true;
 	
-	public battleManager(Handler handler) {
+	public BattleManager(Handler handler) {
 		
 		this.handler = handler;
 		cursor = new Cursor(handler, 60, 80, 40, 40);

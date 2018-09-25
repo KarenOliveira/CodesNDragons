@@ -1,17 +1,17 @@
-package States;
+package states;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-import Graphics.Assets;
 import backEnd_game.Handler;
+import graphics.Assets;
 
-public class defeatState extends State {
+public class DefeatState extends State {
 
 	public int contador = 0;
 	
-	public defeatState(Handler handler) {
+	public DefeatState(Handler handler) {
 		super(handler);
 	}
 

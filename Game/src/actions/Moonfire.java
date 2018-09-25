@@ -1,16 +1,16 @@
-package Actions;
+package actions;
 
 import java.awt.Graphics;
 import Entities.Creature;
 
-public class Starfall extends Action{
+public class Moonfire extends Action{
 	
-	public Starfall(){
+	public Moonfire(){
 		
-		this.name = "Starfall";
-		this.damage = 10;
+		this.name = "Starfire";
+		this.damage = 7;
 		this.isDamageAction = true;
-		this.log = "Enemy lost 10 health";
+		this.log = "Enemy lost 7 health";
 	}
 	
 	public void tick() {
