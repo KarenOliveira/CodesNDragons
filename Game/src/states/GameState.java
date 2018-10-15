@@ -2,8 +2,8 @@ package states;
 
 import java.awt.Graphics;
 
-import Worlds.World;
-import backEnd_game.Handler;
+import backEndGame.Handler;
+import world.World;
 
 public class GameState extends State {
 	

@@ -1,7 +1,7 @@
 package Entities.Static;
 
 import Entities.Entity;
-import backEnd_game.Handler;
+import backEndGame.Handler;
 
 public abstract class StaticEntity extends Entity{
 	

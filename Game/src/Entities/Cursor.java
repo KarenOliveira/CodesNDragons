@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 
 import actions.*;
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import graphics.Assets;
 
 public class Cursor extends Creature{

@@ -1,8 +1,8 @@
-package backEnd_game;
+package backEndGame;
 
-import Worlds.World;
 import graphics.GameCamera;
 import inputs.KeyManager;
+import world.World;
 
 public class Handler {
 

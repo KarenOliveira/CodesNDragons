@@ -1,4 +1,4 @@
-package Worlds;
+package world;
 
 import java.awt.Graphics;
 
@@ -6,7 +6,7 @@ import Entities.EntityManager;
 import Entities.Player;
 import Entities.Static.Spike;
 import Tiles.Tile;
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import utils.Utils;
 
 public class World {

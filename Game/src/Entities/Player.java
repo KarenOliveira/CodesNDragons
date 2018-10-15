@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import graphics.Animations;
 import graphics.Assets;
 import states.State;

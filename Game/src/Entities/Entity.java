@@ -3,7 +3,7 @@ package Entities;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-import backEnd_game.Handler;
+import backEndGame.Handler;
 
 public abstract class Entity {
 

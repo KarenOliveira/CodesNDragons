@@ -3,7 +3,7 @@ package Entities.Static;
 import java.awt.Graphics;
 
 import Tiles.Tile;
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import graphics.Assets;
 
 public class Spike extends StaticEntity {

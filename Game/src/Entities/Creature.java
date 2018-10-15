@@ -1,7 +1,7 @@
 package Entities;
 
 import Tiles.Tile;
-import backEnd_game.Handler;
+import backEndGame.Handler;
 
 public abstract class Creature extends Entity {
 

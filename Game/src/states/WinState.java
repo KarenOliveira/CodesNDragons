@@ -2,7 +2,7 @@ package states;
 
 import java.awt.Graphics;
 
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import graphics.ImageLoader;
 
 public class WinState extends State {

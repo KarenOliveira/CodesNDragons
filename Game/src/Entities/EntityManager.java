@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import backEnd_game.Handler;
+import backEndGame.Handler;
 
 public class EntityManager {
 

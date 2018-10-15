@@ -3,7 +3,7 @@ package Entities;
 import java.awt.Font;
 import java.awt.Graphics;
 
-import backEnd_game.Handler;
+import backEndGame.Handler;
 import graphics.Assets;
 
 public class Enemy extends Creature{

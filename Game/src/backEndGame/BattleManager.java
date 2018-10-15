@@ -1,4 +1,4 @@
-package backEnd_game;
+package backEndGame;
 
 import java.awt.Graphics;
 import Entities.Cursor;

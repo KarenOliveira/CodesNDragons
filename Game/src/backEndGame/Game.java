@@ -1,4 +1,4 @@
-package backEnd_game;
+package backEndGame;
 
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
@@ -66,7 +66,7 @@ public class Game implements Runnable {
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(battleState);
+		State.setState(mainMenuState);
 	}
 	
 	private void tick() {

@@ -2,9 +2,9 @@ package states;
 
 import java.awt.Graphics;
 
-import backEnd_game.Handler;
+import backEndGame.BattleManager;
+import backEndGame.Handler;
 import graphics.Assets;
-import backEnd_game.BattleManager;
 
 public class BattleState extends State {
 
