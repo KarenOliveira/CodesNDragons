@@ -1,6 +1,6 @@
 package graphics;
 
-import Entities.Entity;
+import entities.Entity;
 import backEndGame.Handler;
 
 public class GameCamera {

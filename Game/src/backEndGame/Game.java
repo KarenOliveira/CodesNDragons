@@ -66,7 +66,7 @@ public class Game implements Runnable {
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(mainMenuState);
+		State.setState(winState);
 	}
 	
 	private void tick() {

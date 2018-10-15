@@ -2,11 +2,11 @@ package world;
 
 import java.awt.Graphics;
 
-import Entities.EntityManager;
-import Entities.Player;
-import Entities.Static.Spike;
-import Tiles.Tile;
+import entities.EntityManager;
+import entities.Player;
+import entities.statics.Spike;
 import backEndGame.Handler;
+import tiles.Tile;
 import utils.Utils;
 
 public class World {

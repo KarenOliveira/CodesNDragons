@@ -20,7 +20,7 @@ public class WinState extends State {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(ImageLoader.loadImage("/Menus/youwin.jpg"),0,0,1024,768,null);
+		g.drawImage(ImageLoader.loadImage("/Menus/YouWin.jpg"),0,0,handler.getWidth(),handler.getHeight(),null);
 	}
 
 }

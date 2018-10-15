@@ -39,22 +39,22 @@ public class Assets {
 	
 	
 	public static void init() {
-		SpriteSheet floors = new SpriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Floor.png"));
-		SpriteSheet walls = new SpriteSheet(ImageLoader.loadImage("/Textures/Backgrounds/Wall.png"));
-		SpriteSheet druid = new SpriteSheet(ImageLoader.loadImage("/Textures/Characters/Druid.png"));
-		SpriteSheet traps = new SpriteSheet(ImageLoader.loadImage("/Textures/Entities/Trap0.png"));
+		SpriteSheet floors = new SpriteSheet(ImageLoader.loadImage("/textures/backgrounds/Floor.png"));
+		SpriteSheet walls = new SpriteSheet(ImageLoader.loadImage("/textures/backgrounds/Wall.png"));
+		SpriteSheet druid = new SpriteSheet(ImageLoader.loadImage("/textures/characters/Druid.png"));
+		SpriteSheet traps = new SpriteSheet(ImageLoader.loadImage("/textures/entities/Trap0.png"));
 		button1 = new BufferedImage[2];
 		
 		//Menus
-		mainMenu = ImageLoader.loadImage("/Menus/mainMenu.jpg");
-		battleMenuBackground = ImageLoader.loadImage("/Menus/backgroundbattle.png");
-		button1[0] = ImageLoader.loadImage("/Menus/botao1.png");
-		button1[1] = ImageLoader.loadImage("/Menus/botao2.png");
-		battleMenu = ImageLoader.loadImage("/Menus/BattleMenu.png");
-		dungeonBackground = ImageLoader.loadImage("/Menus/dungeonback.jpg");
+		mainMenu = ImageLoader.loadImage("/menus/mainMenu.jpg");
+		battleMenuBackground = ImageLoader.loadImage("/menus/Backgroundbattle.png");
+		button1[0] = ImageLoader.loadImage("/menus/Botao1.png");
+		button1[1] = ImageLoader.loadImage("/menus/Botao2.png");
+		battleMenu = ImageLoader.loadImage("/menus/BattleMenu.png");
+		dungeonBackground = ImageLoader.loadImage("/menus/Dungeonback.jpg");
 		
 		//Filler
-		black = ImageLoader.loadImage("/Textures/black.jpg");
+		black = ImageLoader.loadImage("/textures/Black.jpg");
 		//floor
 		stonefloorSL = floors.crop(0, 96, width, height);
 		stonefloorSM = floors.crop(16, 96, width, height);
@@ -96,10 +96,10 @@ public class Assets {
 		//Static
 		spike = traps.crop(48, 48, width, height);
 		//cursor
-		cursor = ImageLoader.loadImage("/Menus/Cursor.png");
+		cursor = ImageLoader.loadImage("/menus/Cursor.png");
 		
 		//chars
-		enemy1 = ImageLoader.loadImage("/Textures/Characters/enemy1.png");
+		enemy1 = ImageLoader.loadImage("/textures/characters/Enemy1.png");
 		//druid
 		
 		druid_down = new BufferedImage[4];

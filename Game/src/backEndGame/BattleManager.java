@@ -1,8 +1,8 @@
 package backEndGame;
 
 import java.awt.Graphics;
-import Entities.Cursor;
-import Entities.Enemy;
+import entities.Cursor;
+import entities.Enemy;
 import graphics.Assets;
 import states.State;
 

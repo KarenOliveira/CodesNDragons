@@ -1,7 +1,7 @@
 package actions;
 
 import java.awt.Graphics;
-import Entities.Creature;
+import entities.Creature;
 
 public class Moonfire extends Action{
 	
