@@ -12,6 +12,7 @@ import states.MainMenuState;
 import states.State;
 import states.WinState;
 import graphics.GameCamera;
+import graphics.ImageUtils;
 
 public class Game implements Runnable {
 	
@@ -40,6 +41,8 @@ public class Game implements Runnable {
 	private Text text;
 	//Handler
 	private Handler handler;
+	//ImageUtils
+	private ImageUtils image;
 	
 	public Game(String title,int width, int height) {
 		
@@ -59,6 +62,7 @@ public class Game implements Runnable {
 		handler = new Handler(this);
 		camera = new GameCamera(handler,0, 0);
 		text = new Text();
+		image = new ImageUtils();
 		
 		mainMenuState = new MainMenuState(handler);
 		gameState = new GameState(handler);
@@ -66,7 +70,7 @@ public class Game implements Runnable {
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(winState);
+		State.setState(mainMenuState);
 	}
 	
 	private void tick() {
@@ -186,5 +190,9 @@ public class Game implements Runnable {
 
 	public Text getText() {
 		return text;
+	}
+	
+	public ImageUtils getImageUtils() {
+		return image;
 	}
 }
