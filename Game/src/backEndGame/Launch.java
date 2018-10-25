@@ -4,16 +4,13 @@ import java.awt.Dimension;
 
 public class Launch {
 
-	//RENAN
 	static Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 	public static int WIDTH = (int) screenSize.getWidth();
 	public static int HEIGHT = (int) screenSize.getHeight();
-	//RENAN END
 
-	/*OLD
-	 * 
-	 * public final static int WIDTH = 1024;
-	public final static int HEIGHT= 768; */
+	//VALORES PARA TESTE
+//	public final static int WIDTH = 700;
+//	public final static int HEIGHT = 500;
 
 	public static void main(String[] args) {
 

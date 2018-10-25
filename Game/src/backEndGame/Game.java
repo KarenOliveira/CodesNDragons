@@ -25,6 +25,7 @@ public class Game implements Runnable {
 	
 	private BufferStrategy bs;
 	private Graphics g;
+	private Assets assets;
 	
 	//States
 	public State gameState;
@@ -57,8 +58,9 @@ public class Game implements Runnable {
 		
 		display = new Display(title, width,height);
 		display.getFrame().addKeyListener(keyManager);
-		Assets.init();
 		
+		assets = new Assets();
+		assets.init();
 		handler = new Handler(this);
 		camera = new GameCamera(handler,0, 0);
 		text = new Text();
@@ -70,7 +72,7 @@ public class Game implements Runnable {
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(mainMenuState);
+		State.setState(battleState);
 	}
 	
 	private void tick() {
@@ -194,5 +196,9 @@ public class Game implements Runnable {
 	
 	public ImageUtils getImageUtils() {
 		return image;
+	}
+
+	public Assets getAssets() {
+		return assets;
 	}
 }

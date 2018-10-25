@@ -2,6 +2,8 @@ package tiles;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+
+import graphics.Assets;
 import tiles.corridors.horizontal.*;
 import tiles.corridors.vertical.*;
 import tiles.floors.*;
@@ -11,7 +13,6 @@ import tiles.walls.wallsX.*;
 public class Tile {	
 	
 	public static Tile[] tileStore = new Tile[256];
-
 	public static Tile blackTile = new BlackTile(000);
 	//floor
 	public static Tile stonefloorTileSL = new StoneFloorTileSL(111);
