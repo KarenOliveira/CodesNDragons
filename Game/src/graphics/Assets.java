@@ -7,7 +7,6 @@ import java.util.List;
 public class Assets {
 	
 	private static final int width = 16, height = 16;
-	private static List<BufferedImage> listaAssets;
 	
 	//MENUS
 	public static BufferedImage mainMenu;
@@ -40,6 +39,8 @@ public class Assets {
 	public static BufferedImage mainMenuBack;
 	public static BufferedImage black;
 	
+	public static BufferedImage[] listaAssets = new BufferedImage[300];
+	
 	
 	public void init() {
 		SpriteSheet floors = new SpriteSheet(ImageLoader.loadImage("/textures/backgrounds/Floor.png"));
@@ -47,7 +48,6 @@ public class Assets {
 		SpriteSheet druid = new SpriteSheet(ImageLoader.loadImage("/textures/characters/Druid.png"));
 		SpriteSheet traps = new SpriteSheet(ImageLoader.loadImage("/textures/entities/Trap0.png"));
 		button1 = new BufferedImage[2];
-		listaAssets = new ArrayList<BufferedImage>();
 		
 		//Menus
 		mainMenu = ImageLoader.loadImage("/menus/mainMenu.jpg");
@@ -59,22 +59,22 @@ public class Assets {
 		
 		//Filler
 		black = ImageLoader.loadImage("/textures/Black.jpg");
-//		listaAssets.add(0, black);
+		listaAssets[0] = black;
 		//floor
 		stonefloorSL = floors.crop(0, 96, width, height);
-//		listaAssets.add(111, stonefloorSL);
+		listaAssets[111] = stonefloorSL;
 		stonefloorSM = floors.crop(16, 96, width, height);
-//		listaAssets.add(112,stonefloorSM);
+		listaAssets[112] = stonefloorSM;
 		stonefloorSR = floors.crop(32, 96, width, height);
-//		listaAssets.add(113, stonefloorSR);
+		listaAssets[113] = stonefloorSR;
 		stonefloorML = floors.crop(0, 112, width, height);
-//		listaAssets.add(121,stonefloorML);
+		listaAssets[121] = stonefloorML;
 		stonefloorMM = floors.crop(16, 112, width, height);
-//		listaAssets.add(122, stonefloorMM);
+		listaAssets[122] = stonefloorMM;
 		stonefloorMR = floors.crop(32, 112, width, height);
-//		listaAssets.add(123, stonefloorMR);
+		listaAssets[123] = stonefloorMR;
 		stonefloorIL = floors.crop(0, 128, width, height);
-//		listaAssets.add(131, stonefloorIL);
+		listaAssets[131] = stonefloorIL;
 		stonefloorIM = floors.crop(16, 128, width, height);
 //		listaAssets.add(132, stonefloorIM);
 		stonefloorIR = floors.crop(32, 128, width, height);
@@ -111,7 +111,7 @@ public class Assets {
 		spike = traps.crop(48, 48, width, height);
 		//cursor
 		cursor = ImageLoader.loadImage("/menus/Cursor.png");
-		listaAssets.add(cursor);
+		listaAssets[10] = cursor;
 		
 		//chars
 		enemy1 = ImageLoader.loadImage("/textures/characters/Enemy1.png");
@@ -132,6 +132,6 @@ public class Assets {
 			druid_up[i] = druid.crop(i*16, 48, width, height);	
 	}
 	public BufferedImage getImage(int id) {
-		return listaAssets.get(id);
+		return listaAssets[id];
 	}
 }
