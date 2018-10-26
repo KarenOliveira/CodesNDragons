@@ -76,13 +76,14 @@ public class Assets {
 		stonefloorIL = floors.crop(0, 128, width, height);
 		listaAssets[131] = stonefloorIL;
 		stonefloorIM = floors.crop(16, 128, width, height);
-//		listaAssets.add(132, stonefloorIM);
+		listaAssets[132] = stonefloorIM;
 		stonefloorIR = floors.crop(32, 128, width, height);
-//		listaAssets.add(133, stonefloorIR);
+		listaAssets[133] = stonefloorIR;
 		stonefloorX = floors.crop(80, 96, width, height);
-		
+		listaAssets[100] = stonefloorX;
 		//wall
 		stonewallSL = walls.crop(0, 192, width, height);
+		listaAssets[211] = stonefloorSL;
 		stonewallSM = walls.crop(16, 192, width, height);
 		stonewallSR = walls.crop(32, 192, width, height);
 		stonewallML = walls.crop(0, 208, width, height);
