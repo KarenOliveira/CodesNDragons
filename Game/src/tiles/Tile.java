@@ -3,6 +3,7 @@ package tiles;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import backEndGame.Handler;
 import graphics.Assets;
 import tiles.corridors.horizontal.*;
 import tiles.corridors.vertical.*;
@@ -11,7 +12,6 @@ import tiles.walls.*;
 import tiles.walls.wallsX.*;
 
 public class Tile {	
-	
 	public static Tile[] tileStore = new Tile[256];
 	public static Tile blackTile = new BlackTile(000);
 	//floor

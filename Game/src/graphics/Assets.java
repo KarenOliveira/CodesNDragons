@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.omg.PortableServer.LIFESPAN_POLICY_ID;
+
 public class Assets {
 	
 	private static final int width = 16, height = 16;
@@ -83,31 +85,47 @@ public class Assets {
 		listaAssets[100] = stonefloorX;
 		//wall
 		stonewallSL = walls.crop(0, 192, width, height);
-		listaAssets[211] = stonefloorSL;
+		listaAssets[211] = stonewallSL;
 		stonewallSM = walls.crop(16, 192, width, height);
+		listaAssets[212] = stonewallSM;
 		stonewallSR = walls.crop(32, 192, width, height);
+		listaAssets[213] = stonewallSR;
 		stonewallML = walls.crop(0, 208, width, height);
+		listaAssets[221] = stonewallML;
 		stonewallMM = walls.crop(16, 208, width, height);
+		listaAssets[222] = stonewallMM;
 		stonewallIL = walls.crop(0, 224, width, height);
+		listaAssets[131] = stonewallIL;
 		stonewallIR = walls.crop(32 ,224 , width, height);
+		listaAssets[133] = stonewallIR;
 		
 		//wall X
 		stonewallSX = walls.crop(64,192,width,height);
+		listaAssets[21] = stonewallSX;
 		stonewallRX = walls.crop(80,208, width, height);
+		listaAssets[22] = stonewallRX;
 		stonewallIX = walls.crop(64,224, width, height);
+		listaAssets[23] = stonewallIX;
 		stonewallLX = walls.crop(48, 208, width, height);
+		listaAssets[24] = stonewallLX;
 		stonewallX = walls.crop(64, 208, width, height);
+		listaAssets[25] = stonewallLX;
 		
 		//corridors
 		//vertical
 		corridorVS = floors.crop(48,96, width, height);
+		listaAssets[11] = corridorVS;
 		corridorVM = floors.crop(48, 112, width, height);
+		listaAssets[12] = corridorVM;
 		corridorVI = floors.crop(48, 128, width, height);
+		listaAssets[13] = corridorVI;
 		//horizontal
 		corridorHS = floors.crop(48, 112, width, height);
+		listaAssets[14] = corridorHS;
 		corridorHM = floors.crop(64, 112 ,width, height);
+		listaAssets[15] = corridorHM;
 		corridorHI = floors.crop(80, 112, width, height);
-		
+		listaAssets[16] = corridorHI;
 		//Static
 		spike = traps.crop(48, 48, width, height);
 		//cursor
