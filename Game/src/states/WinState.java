@@ -14,7 +14,7 @@ public class WinState extends State {
 	@Override
 	public void tick() {
 		if(handler.getKeyManager().interact) {
-			State.setState(handler.getGame().gameState);
+			State.setState(handler.getGame().worldState);
 		}
 	}
 

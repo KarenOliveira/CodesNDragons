@@ -7,7 +7,7 @@ import graphics.Assets;
 import graphics.Text;
 import inputs.KeyManager;
 import states.BattleState;
-import states.GameState;
+import states.WorldState;
 import states.MainMenuState;
 import states.State;
 import states.WinState;
@@ -28,7 +28,7 @@ public class Game implements Runnable {
 	private Assets assets;
 	
 	//States
-	public State gameState;
+	public State worldState;
 	public State mainMenuState;
 	public State battleState;
 	public State defeatState;
@@ -67,12 +67,12 @@ public class Game implements Runnable {
 		image = new ImageUtils();
 		
 		mainMenuState = new MainMenuState(handler);
-		gameState = new GameState(handler);
+		worldState = new WorldState(handler);
 		battleState = new BattleState(handler);
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(mainMenuState);
+		State.setState(worldState);
 	}
 	
 	private void tick() {
