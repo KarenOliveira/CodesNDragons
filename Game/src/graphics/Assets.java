@@ -59,26 +59,19 @@ public class Assets {
 		
 		//Filler
 		black = ImageLoader.loadImage("/textures/Black.jpg");
-//		listaAssets.add(0, black);
 		//floor
 		stonefloorSL = floors.crop(0, 96, width, height);
-//		listaAssets.add(111, stonefloorSL);
 		stonefloorSM = floors.crop(16, 96, width, height);
-//		listaAssets.add(112,stonefloorSM);
 		stonefloorSR = floors.crop(32, 96, width, height);
-//		listaAssets.add(113, stonefloorSR);
+		
 		stonefloorML = floors.crop(0, 112, width, height);
-//		listaAssets.add(121,stonefloorML);
 		stonefloorMM = floors.crop(16, 112, width, height);
-//		listaAssets.add(122, stonefloorMM);
 		stonefloorMR = floors.crop(32, 112, width, height);
-//		listaAssets.add(123, stonefloorMR);
+
 		stonefloorIL = floors.crop(0, 128, width, height);
-//		listaAssets.add(131, stonefloorIL);
 		stonefloorIM = floors.crop(16, 128, width, height);
-//		listaAssets.add(132, stonefloorIM);
+		
 		stonefloorIR = floors.crop(32, 128, width, height);
-//		listaAssets.add(133, stonefloorIR);
 		stonefloorX = floors.crop(80, 96, width, height);
 		
 		//wall
