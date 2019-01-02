@@ -64,7 +64,7 @@ public class Cursor extends Creature{
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.cursor,(int) (x),(int) (y), 40, 40, null);
+		g.drawImage(handler.getAssets().getImage(0),(int) (x),(int) (y), 40, 40, null);
 		handler.getGame().getText().centerTextOnPosition(g, "Personagem", new Font("Comic Sans MS", Font.ITALIC, 20), handler.getWidth()/4, 50);
 		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(0).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 100);
 		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(1).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 135);

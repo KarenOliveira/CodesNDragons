@@ -1,5 +1,6 @@
 package backEndGame;
 
+import graphics.Assets;
 import graphics.GameCamera;
 import inputs.KeyManager;
 import world.World;
@@ -52,5 +53,8 @@ public class Handler {
 	public void setWorld(World world) {
 		
 		this.world = world;
+	}
+	public Assets getAssets() {
+		return game.getAssets();
 	}
 }
