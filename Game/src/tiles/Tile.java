@@ -3,7 +3,6 @@ package tiles;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import graphics.Assets;
 import tiles.corridors.horizontal.*;
 import tiles.corridors.vertical.*;
 import tiles.floors.*;

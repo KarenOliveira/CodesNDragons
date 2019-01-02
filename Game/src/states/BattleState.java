@@ -36,7 +36,5 @@ public class BattleState extends State {
 		g.drawImage(Assets.battleMenuBackground,handler.getWidth()/2,0, handler.getWidth()/2 , handler.getHeight()/2,null);
 		
 		battleManager.render(g);
-		
-		//uiManager.render(g);
 	}
 }

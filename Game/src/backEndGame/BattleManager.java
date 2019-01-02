@@ -18,7 +18,7 @@ public class BattleManager {
 		
 		this.handler = handler;
 		cursor = new Cursor(handler, 60, 80, 40, 40);
-		enemy = new Enemy(handler, (3*(handler.getWidth())/4) - Assets.enemy1.getWidth()/7, 160,400,180);
+		enemy = new Enemy(handler, (3*(handler.getWidth())/4) - Assets.enemy1.getWidth()/7, handler.getHeight()/4,400,180);
 	}
 	
 	public void tick() throws InterruptedException {

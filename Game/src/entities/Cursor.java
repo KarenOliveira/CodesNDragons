@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import actions.*;
 import backEndGame.Handler;
-import graphics.Assets;
 
 public class Cursor extends Creature{
 	
@@ -70,11 +69,8 @@ public class Cursor extends Creature{
 		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(1).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 135);
 		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(2).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 170);
 		handler.getGame().getText().centerTextUpperLeft(g, actionlist.get(3).getName(), new Font("Comic Sans MS", Font.ITALIC, 25), 100, 205);
-		//g.drawString(log, 550, 500);
-		handler.getGame().getText().centerTextUpperLeft(g, log, new Font("Comic Sans MS", Font.ITALIC, 40), handler.getWidth()/2+70, (int) (3*(handler.getHeight()/4)));
-		
-		g.setFont(new Font("Comic Sans MS", Font.ITALIC, 40));
-		g.drawString("Player - HP:   " + health + "/" + MAX_HEALTH, 50, 500);
+		handler.getGame().getText().centerTextUpperLeft(g, log, new Font("Comic Sans MS", Font.ITALIC, 40), 3 * handler.getWidth()/4, 4 * handler.getHeight()/7);
+		handler.getGame().getText().centerTextOnPosition(g, "Player - HP:   " + health + "/" + MAX_HEALTH, new Font("Comic Sans MS", Font.ITALIC, 40), handler.getWidth()/4, 4 * handler.getHeight()/7);
 	}
 	
 }

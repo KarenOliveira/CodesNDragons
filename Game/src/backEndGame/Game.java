@@ -72,7 +72,7 @@ public class Game implements Runnable {
 		winState = new WinState(handler);
 		defeatState = new states.DefeatState(handler);
 		
-		State.setState(worldState);
+		State.setState(battleState);
 	}
 	
 	private void tick() {
