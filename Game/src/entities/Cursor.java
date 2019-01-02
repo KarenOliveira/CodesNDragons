@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import actions.*;
 import backEndGame.Handler;
-import graphics.Assets;
 
 public class Cursor extends Creature{
 	
