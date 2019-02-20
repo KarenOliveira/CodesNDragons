@@ -50,7 +50,7 @@ public class Assets {
 		listaAssets = new ArrayList<BufferedImage>();
 		
 		//Menus
-		mainMenu = ImageLoader.loadImage("/menus/mainMenu.jpg");
+		mainMenu = ImageLoader.loadImage("/menus/MainMenu.jpg");
 		battleMenuBackground = ImageLoader.loadImage("/menus/Backgroundbattle.png");
 		button1[0] = ImageLoader.loadImage("/menus/Botao1.png");
 		button1[1] = ImageLoader.loadImage("/menus/Botao2.png");
