@@ -3,12 +3,36 @@ package tiles;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import graphics.Assets;
-import tiles.corridors.horizontal.*;
-import tiles.corridors.vertical.*;
-import tiles.floors.*;
-import tiles.walls.*;
-import tiles.walls.wallsX.*;
+import tiles.corridors.horizontal.CorridorTileHI;
+import tiles.corridors.horizontal.CorridorTileHM;
+import tiles.corridors.horizontal.CorridorTileHS;
+import tiles.corridors.vertical.CorridorTileVI;
+import tiles.corridors.vertical.CorridorTileVM;
+import tiles.corridors.vertical.CorridorTileVS;
+import tiles.floors.StoneFloorTileIL;
+import tiles.floors.StoneFloorTileIM;
+import tiles.floors.StoneFloorTileIR;
+import tiles.floors.StoneFloorTileML;
+import tiles.floors.StoneFloorTileMM;
+import tiles.floors.StoneFloorTileMR;
+import tiles.floors.StoneFloorTileSL;
+import tiles.floors.StoneFloorTileSM;
+import tiles.floors.StoneFloorTileSR;
+import tiles.floors.StoneFloorTileX;
+import tiles.walls.StoneWallTileIL;
+import tiles.walls.StoneWallTileIM;
+import tiles.walls.StoneWallTileIR;
+import tiles.walls.StoneWallTileML;
+import tiles.walls.StoneWallTileMM;
+import tiles.walls.StoneWallTileMR;
+import tiles.walls.StoneWallTileSL;
+import tiles.walls.StoneWallTileSM;
+import tiles.walls.StoneWallTileSR;
+import tiles.walls.wallsX.StoneWallTileIX;
+import tiles.walls.wallsX.StoneWallTileLX;
+import tiles.walls.wallsX.StoneWallTileRX;
+import tiles.walls.wallsX.StoneWallTileSX;
+import tiles.walls.wallsX.StoneWallTileX;
 
 public class Tile {	
 	
